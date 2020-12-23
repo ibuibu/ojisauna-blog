@@ -1,7 +1,7 @@
 ---
-title: Hello World
+title: 今日もいい天気
 date: "2015-05-01T22:12:03.284Z"
-description: "Hello World"
+description: "毎日がスペシャルやね"
 ---
 
 This is my first post on my new fake blog! How exciting!

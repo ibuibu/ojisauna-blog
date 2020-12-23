@@ -41,7 +41,7 @@ const Bio = () => {
 
   return (
     <div className="bio">
-      {avatar && (
+      {/* {avatar && (
         <Image
           fixed={avatar}
           alt={author?.name || ``}
@@ -50,8 +50,8 @@ const Bio = () => {
             borderRadius: `50%`,
           }}
         />
-      )}
-      {author?.name && (
+      )} */}
+      {/* {author?.name && (
         <p>
           Written by <strong>{author.name}</strong> {author?.summary || null}
           {` `}
@@ -59,7 +59,7 @@ const Bio = () => {
             You should follow them on Twitter
           </a>
         </p>
-      )}
+      )} */}
     </div>
   )
 }

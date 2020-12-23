@@ -1,8 +1,13 @@
 ---
-title: SkyWay v3をよろしく
+title: WebCodecって知ってますか
 date: "2015-05-28T22:40:32.169Z"
-description: This is a custom description for SEO and Open Graph purposes, rather than the default generated excerpt. Simply add a description field to the frontmatter.
+description: テスト的な文章をここに書いてますよ。すごい適当に書いてるんですね。
 ---
+
+ここにjsのコードを書きますね
+```js
+console.log('hoge');
+```
 
 Far far away, behind the word mountains, far from the countries Vokalia and
 Consonantia, there live the blind texts. Separated they live in Bookmarksgrove
