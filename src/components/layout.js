@@ -34,24 +34,28 @@ const Layout = ({ location, title, children }) => {
       // <h1 className="main-heading">
       // <Link to="/">{title}</Link>
       // </h1>
-      <Link to="/">
-        <div style={{ width: "200px", margin: "auto" }}>
-          <Image
-            fadeIn={true}
-            fluid={data.testFluid.childImageSharp.fluid}
-          ></Image>
-        </div>
-      </Link>
+      <header className="global-header">
+        {header}
+        <Link to="/">
+          <div style={{ width: "200px", margin: "auto" }}>
+            <Image
+              fadeIn={false}
+              fluid={data.testFluid.childImageSharp.fluid}
+            ></Image>
+          </div>
+        </Link>
+      </header>
     )
   } else {
     header = (
       // <Link className="header-link-home" to="/">
       //   {title}
       // </Link>
+
       <Link to="/">
-        <div style={{ width: "200px" }}>
+        <div style={{ width: "200px", margin: "auto" }}>
           <Image
-            fadeIn={true}
+            fadeIn={false}
             fluid={data.testFluid.childImageSharp.fluid}
           ></Image>
         </div>
@@ -61,7 +65,7 @@ const Layout = ({ location, title, children }) => {
 
   return (
     <div className="global-wrapper" data-is-root-path={isRootPath}>
-      <header className="global-header">{header}</header>
+      {header}
       <main>{children}</main>
       <footer className="global-footer">
         <p>

@@ -1,14 +1,24 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
 
-import Bio from "../components/bio"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import Image from "gatsby-image"
 
 const BlogPostTemplate = ({ data, location }) => {
   const post = data.markdownRemark
   const siteTitle = data.site.siteMetadata?.title || `Title`
   const { previous, next } = data
+
+  const FeaturedImg = () => {
+    if (post.frontmatter.featuredImage) {
+      const featuredImgFluid =
+        post.frontmatter.featuredImage.childImageSharp.fluid
+      return <Image imgStyle={{ width: "1px" }} fluid={featuredImgFluid} />
+    } else {
+      return <></>
+    }
+  }
 
   return (
     <Layout location={location} title={siteTitle}>
@@ -16,6 +26,7 @@ const BlogPostTemplate = ({ data, location }) => {
         title={post.frontmatter.title}
         description={post.frontmatter.description || post.excerpt}
       />
+      <FeaturedImg />
       <article
         className="blog-post"
         itemScope
@@ -30,9 +41,9 @@ const BlogPostTemplate = ({ data, location }) => {
           itemProp="articleBody"
         />
         <hr />
-        <footer>
-          <Bio />
-        </footer>
+        {/* <footer> */}
+        {/* <Bio /> */}
+        {/* </footer> */}
       </article>
       <nav className="blog-post-nav">
         <ul
@@ -41,8 +52,8 @@ const BlogPostTemplate = ({ data, location }) => {
             flexWrap: `wrap`,
             justifyContent: `space-between`,
             listStyle: `none`,
-            paddingLeft: '16rem',
-            paddingRight: '16rem',
+            paddingLeft: "16rem",
+            paddingRight: "16rem",
           }}
         >
           <li>
@@ -84,8 +95,15 @@ export const pageQuery = graphql`
       html
       frontmatter {
         title
-        date(formatString: "MMMM DD, YYYY")
+        date(formatString: "YYYY年M月D日")
         description
+        featuredImage {
+          childImageSharp {
+            fluid(maxWidth: 800) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
       }
     }
     previous: markdownRemark(id: { eq: $previousPostId }) {
