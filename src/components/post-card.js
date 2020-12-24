@@ -15,6 +15,16 @@ const PostCard = props => {
     }
   }
 
+  const Tags = ({ tags }) => {
+    return (
+      <div className="tags">
+        {(tags || []).map(tag => (
+          <a key={tag}>{tag}</a>
+        ))}
+      </div>
+    )
+  }
+
   return (
     <li key={post.fields.slug}>
       <article
@@ -29,6 +39,7 @@ const PostCard = props => {
               <span itemProp="headline">{title}</span>
             </Link>
           </h2>
+          <Tags tags={post.frontmatter.tags} />
           <small>{post.frontmatter.date}</small>
         </header>
         <section>

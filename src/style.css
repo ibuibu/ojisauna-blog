@@ -266,6 +266,7 @@ a:focus {
     rgba(161, 203, 255, 1) 100%
   );
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 20rem;
@@ -316,6 +317,15 @@ a:focus {
 
 .post-list-item header {
   margin-bottom: var(--spacing-4);
+}
+
+.tags a {
+  font-size: 0.8rem;
+  list-style: none;
+  color: white;
+  padding: 0.5rem;
+  margin-right: 1rem;
+  background-color: var(--color-primary);
 }
 
 .header-link-home {

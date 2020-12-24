@@ -1,5 +1,4 @@
 import React from "react"
-// import { Link } from "gatsby"
 import { Link, useStaticQuery, graphql } from "gatsby"
 import Image from "gatsby-image"
 
@@ -31,9 +30,6 @@ const Layout = ({ location, title, children }) => {
 
   if (isRootPath) {
     header = (
-      // <h1 className="main-heading">
-      // <Link to="/">{title}</Link>
-      // </h1>
       <header className="global-header">
         {header}
         <Link to="/">
@@ -44,22 +40,37 @@ const Layout = ({ location, title, children }) => {
             ></Image>
           </div>
         </Link>
+        <Link to="/engeneering">
+          <p>
+            <a>エンジニアリング</a>
+          </p>
+        </Link>
+        <Link to="/updates">
+          <p>
+            <a>アップデート情報</a>
+          </p>
+        </Link>
       </header>
     )
   } else {
     header = (
-      // <Link className="header-link-home" to="/">
-      //   {title}
-      // </Link>
-
-      <Link to="/">
-        <div style={{ width: "200px", margin: "auto" }}>
-          <Image
-            fadeIn={false}
-            fluid={data.testFluid.childImageSharp.fluid}
-          ></Image>
-        </div>
-      </Link>
+      <header>
+        <Link to="/">
+          <div style={{ width: "200px", margin: "auto" }}>
+            <Image
+              fadeIn={false}
+              fluid={data.testFluid.childImageSharp.fluid}
+            ></Image>
+          </div>
+        </Link>
+        <Link to="/engeneering">
+          <a>エンジニアリング</a>
+        </Link>
+        <p> </p>
+        <Link to="/updates">
+          <a>アップデート情報</a>
+        </Link>
+      </header>
     )
   }
 
