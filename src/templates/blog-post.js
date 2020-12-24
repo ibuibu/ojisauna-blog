@@ -14,7 +14,7 @@ const BlogPostTemplate = ({ data, location }) => {
     if (post.frontmatter.featuredImage) {
       const featuredImgFluid =
         post.frontmatter.featuredImage.childImageSharp.fluid
-      return <Image imgStyle={{ width: "1px" }} fluid={featuredImgFluid} />
+      return <Image fluid={featuredImgFluid} />
     } else {
       return <></>
     }
