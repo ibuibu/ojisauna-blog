@@ -31,7 +31,6 @@ const Layout = ({ location, title, children }) => {
   if (isRootPath) {
     header = (
       <header className="global-header">
-        {header}
         <Link to="/">
           <div style={{ width: "200px", margin: "auto" }}>
             <Image
@@ -40,16 +39,8 @@ const Layout = ({ location, title, children }) => {
             ></Image>
           </div>
         </Link>
-        <Link to="/engeneering">
-          <p>
-            <a>エンジニアリング</a>
-          </p>
-        </Link>
-        <Link to="/updates">
-          <p>
-            <a>アップデート情報</a>
-          </p>
-        </Link>
+        <Link to="/engeneering">エンジニアリング</Link>
+        <Link to="/updates">アップデート情報</Link>
       </header>
     )
   } else {
@@ -64,11 +55,10 @@ const Layout = ({ location, title, children }) => {
           </div>
         </Link>
         <Link to="/engeneering">
-          <a>エンジニアリング</a>
+          エンジニアリング
         </Link>
-        <p> </p>
         <Link to="/updates">
-          <a>アップデート情報</a>
+          アップデート情報
         </Link>
       </header>
     )

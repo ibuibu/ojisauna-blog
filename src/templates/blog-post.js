@@ -4,6 +4,14 @@ import { Link, graphql } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Image from "gatsby-image"
+import {
+  TwitterShareButton,
+  TwitterIcon,
+  FacebookShareButton,
+  FacebookIcon,
+  HatenaShareButton,
+  HatenaIcon,
+} from "react-share"
 
 const BlogPostTemplate = ({ data, location }) => {
   const post = data.markdownRemark
@@ -33,6 +41,19 @@ const BlogPostTemplate = ({ data, location }) => {
         itemType="http://schema.org/Article"
       >
         <header>
+          <TwitterShareButton
+            url={location.href}
+            title={post.frontmatter.title}
+            hashtags={["WebRTCSkyWay"]}
+          >
+            <TwitterIcon size={32} round={true} />
+          </TwitterShareButton>
+          <FacebookShareButton url={location.href}>
+            <FacebookIcon size={32} round={true} />
+          </FacebookShareButton>
+          <HatenaShareButton url={location.href} title={post.frontmatter.title}>
+            <HatenaIcon size={32} round={true} />
+          </HatenaShareButton>
           <h1 itemProp="headline">{post.frontmatter.title}</h1>
           <p>{post.frontmatter.date}</p>
         </header>
