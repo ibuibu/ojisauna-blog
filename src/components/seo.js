@@ -29,6 +29,7 @@ const SEO = ({ description, lang, meta, title }) => {
 
   const metaDescription = description || site.siteMetadata.description
   const defaultTitle = site.siteMetadata?.title
+  const isRoute = defaultTitle === title
 
   return (
     <Helmet
@@ -36,7 +37,7 @@ const SEO = ({ description, lang, meta, title }) => {
         lang,
       }}
       title={title}
-      titleTemplate={defaultTitle ? `%s | ${defaultTitle}` : null}
+      titleTemplate={isRoute ? defaultTitle : `%s | ${defaultTitle}`}
       meta={[
         {
           name: `robots`,

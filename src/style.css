@@ -60,8 +60,9 @@
   --fontSize-5: 2.074rem;
   --fontSize-6: 2.488rem;
   --fontSize-7: 2.986rem;
-  --color-primary: #005b99;
-  --color-text: #2e353f;
+  /* --color-primary: #005b99; */
+  --color-primary: #326bff;
+  --color-text: #3f3f3f;
   --color-text-light: #4f5969;
   --color-heading: #1a202c;
   /* --color-heading-black: black; */
@@ -251,20 +252,54 @@ a:focus {
 .global-wrapper {
   margin: var(--spacing-0) auto;
   max-width: var(--maxWidth-wrapper);
-  /* padding: var(--spacing-10) var(--spacing-5); */
+  background-color: #f3f3f3;
 }
 
 .global-wrapper[data-is-root-path="true"] .bio {
   margin-bottom: var(--spacing-20);
 }
 
-.global-header {
-  background: rgb(174, 223, 238);
-  background: radial-gradient(
-    circle,
-    rgba(174, 223, 238, 1) 0%,
-    rgba(161, 203, 255, 1) 100%
+/* .global-header {
+  background: rgb(6, 0, 110);
+  background: linear-gradient(
+    333deg,
+    rgba(6, 0, 110, 1) 0%,
+    rgba(50, 107, 255, 1) 35%,
+    rgba(80, 207, 255, 1) 100%
   );
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 20rem;
+} */
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  justify-items: auto;
+  width: 100%;
+}
+
+.navbar-link {
+  margin-top: 2rem;
+}
+.navbar-link a {
+  font-size: 1.2rem;
+  margin-right: 3rem;
+  text-decoration: none;
+  color: rgb(240, 240, 240);
+}
+
+.global-header-wrapper {
+  background: linear-gradient(315deg, #06006e, #326bff, #7bb2ff);
+  background-size: 200% 200%;
+  -webkit-animation: AnimationName 15s ease infinite;
+  -moz-animation: AnimationName 15s ease infinite;
+  animation: AnimationName 15s ease infinite;
+}
+
+.global-header {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -272,6 +307,49 @@ a:focus {
   height: 20rem;
 }
 
+@-webkit-keyframes AnimationName {
+  0% {
+    background-position: 100% 100%;
+  }
+  50% {
+    background-position: 30% 30%;
+  }
+  100% {
+    background-position: 100% 100%;
+  }
+}
+@-moz-keyframes AnimationName {
+  0% {
+    background-position: 100% 100%;
+  }
+  50% {
+    background-position: 30% 30%;
+  }
+  100% {
+    background-position: 100% 100%;
+  }
+}
+@keyframes AnimationName {
+  0% {
+    background-position: 100% 100%;
+  }
+  50% {
+    background-position: 30% 30%;
+  }
+  100% {
+    background-position: 100% 100%;
+  }
+}
+
+.global-header a {
+  text-decoration: none;
+}
+
+.global-header h1 {
+  font-size: 2.9rem;
+  margin-bottom: 7rem;
+  color: white;
+}
 .global-footer p {
   text-align: center;
 }
@@ -282,6 +360,10 @@ a:focus {
   margin: 0;
 }
 
+.post-list {
+  margin-bottom: 0;
+}
+
 .post-list-wrapper {
   display: flex;
   flex-wrap: wrap;
@@ -289,19 +371,17 @@ a:focus {
 }
 
 .post-list-item {
-  border-radius: 10px;
-  box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.14);
+  /* box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.14); */
   width: 20rem;
-  /* background-color: gainsboro; */
   margin-bottom: var(--spacing-8);
   margin-top: var(--spacing-8);
-  margin-left: var(--spacing-2);
-  margin-right: var(--spacing-2);
-  padding: var(--spacing-8);
+  margin-left: var(--spacing-4);
+  margin-right: var(--spacing-4);
 }
-.post-list-item-img {
-  width: 1px;
-  margin-bottom: var(--spacing-0);
+
+.post-list-content {
+  padding: var(--spacing-8);
+  background-color: white;
 }
 
 .post-list-item p {
@@ -309,10 +389,10 @@ a:focus {
 }
 
 .post-list-item h2 {
-  font-size: var(--fontSize-3);
-  color: var(--color-primary);
+  font-size: var(--fontSize-2);
+  color:var(--color-text);
   margin-bottom: var(--spacing-2);
-  margin-top: var(--spacing-0);
+  margin-top: var(--spacing-4);
 }
 
 .post-list-item header {
@@ -323,7 +403,7 @@ a:focus {
   font-size: 0.8rem;
   list-style: none;
   color: white;
-  padding: 0.5rem;
+  padding: 0.4rem 0.6rem;
   margin-right: 1rem;
   background-color: var(--color-primary);
 }
@@ -355,6 +435,7 @@ a:focus {
   max-width: 50rem;
   margin: auto;
   padding: var(--spacing-12);
+  background-color: white;
 }
 
 .blog-post header h1 {

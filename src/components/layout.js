@@ -2,22 +2,25 @@ import React from "react"
 import { Link, useStaticQuery, graphql } from "gatsby"
 import Image from "gatsby-image"
 
-const Layout = ({ location, title, children }) => {
+const Layout = ({ location, children }) => {
   const rootPath = `${__PATH_PREFIX__}/`
-  const isRootPath = location.pathname === rootPath
+  const isTop =
+    location.pathname === rootPath ||
+    location.pathname === "/updates" ||
+    location.pathname === "/engeneering"
   let header
 
   const data = useStaticQuery(
     graphql`
       {
-        testFixed: file(relativePath: { eq: "logo.png" }) {
+        estFixed: file(relativePath: { eq: "logo.png" }) {
           childImageSharp {
             fixed(width: 300) {
               ...GatsbyImageSharpFixed
             }
           }
         }
-        testFluid: file(relativePath: { eq: "logo.png" }) {
+        estFluid: file(relativePath: { eq: "aa.png" }) {
           childImageSharp {
             fluid(maxWidth: 300) {
               ...GatsbyImageSharpFluid
@@ -28,50 +31,75 @@ const Layout = ({ location, title, children }) => {
     `
   )
 
-  if (isRootPath) {
+  if (isTop) {
     header = (
-      <header className="global-header">
-        <Link to="/">
-          <div style={{ width: "200px", margin: "auto" }}>
-            <Image
-              fadeIn={false}
-              fluid={data.testFluid.childImageSharp.fluid}
-            ></Image>
+      <div className="global-header-wrapper">
+        <div className="navbar">
+          <div style={{ width: "150px", margin: "1.2rem", marginLeft: "5rem" }}>
+            <Link to="/">
+              <Image
+                fadeIn={false}
+                fluid={data.estFluid.childImageSharp.fluid}
+              ></Image>
+            </Link>
           </div>
-        </Link>
-        <Link to="/engeneering">エンジニアリング</Link>
-        <Link to="/updates">アップデート情報</Link>
-      </header>
+          <div className="navbar-link">
+            <Link to="/updates">アップデート情報</Link>
+            <Link to="/engeneering">エンジニアリング</Link>
+            <Link to="https://webrtc.ecl.ntt.com" target="_blank">
+              公式サイト□
+            </Link>
+          </div>
+        </div>
+        <header className="global-header">
+          <Link to="/">
+            <h1>SkyWay Product Blog</h1>
+          </Link>
+        </header>
+      </div>
     )
   } else {
     header = (
-      <header>
-        <Link to="/">
-          <div style={{ width: "200px", margin: "auto" }}>
-            <Image
-              fadeIn={false}
-              fluid={data.testFluid.childImageSharp.fluid}
-            ></Image>
+      <div
+        style={{
+          position: "absolute",
+          zIndex: 10,
+          display: "flex",
+          width: "100%",
+        }}
+      >
+        <div className="navbar">
+          <div style={{ width: "150px", margin: "1.2rem", marginLeft: "5rem" }}>
+            <Link to="/">
+              <Image
+                fadeIn={false}
+                fluid={data.estFluid.childImageSharp.fluid}
+              ></Image>
+            </Link>
           </div>
-        </Link>
-        <Link to="/engeneering">
-          エンジニアリング
-        </Link>
-        <Link to="/updates">
-          アップデート情報
-        </Link>
-      </header>
+          <div className="navbar-link">
+            <Link to="/updates">アップデート情報</Link>
+            <Link to="/engeneering">エンジニアリング</Link>
+            <Link to="https://webrtc.ecl.ntt.com" target="_blank">
+              公式サイト□
+            </Link>
+          </div>
+        </div>
+      </div>
     )
   }
 
   return (
-    <div className="global-wrapper" data-is-root-path={isRootPath}>
+    <div className="global-wrapper" data-is-root-path={isTop}>
       {header}
       <main>{children}</main>
       <footer className="global-footer">
         <p>
-          © {new Date().getFullYear()}
-          {` `}
+          {/* © {new Date().getFullYear()} */}
+          {/* {` `} */}
+          © NTT Communications Corporation All Rights Reserved.
+          <br />
+          <br />
           <a href="https://webrtc.ecl.ntt.com/">SkyWay</a>
         </p>
       </footer>

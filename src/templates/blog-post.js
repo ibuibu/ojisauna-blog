@@ -22,7 +22,13 @@ const BlogPostTemplate = ({ data, location }) => {
     if (post.frontmatter.featuredImage) {
       const featuredImgFluid =
         post.frontmatter.featuredImage.childImageSharp.fluid
-      return <Image fluid={featuredImgFluid} />
+      return (
+        <Image
+          imgStyle={{ opacity: 0.4 }}
+          style={{ background: "#000" }}
+          fluid={featuredImgFluid}
+        />
+      )
     } else {
       return <></>
     }
@@ -34,6 +40,38 @@ const BlogPostTemplate = ({ data, location }) => {
         title={post.frontmatter.title}
         description={post.frontmatter.description || post.excerpt}
       />
+      <div
+        itemProp="headline"
+        style={{
+          display: "flex",
+          width: "100%",
+          height: "500px",
+          justifyContent: "center",
+          alignItems: "center",
+          position: "absolute",
+          zIndex: 9,
+        }}
+      >
+        <div>
+          <h1
+            style={{
+              margin: "auto",
+              fontSize: "3rem",
+              color: "white",
+            }}
+          >
+            {post.frontmatter.title}
+          </h1>
+          <p
+            style={{
+              textAlign: "center",
+              color: "white",
+            }}
+          >
+            {post.frontmatter.date}
+          </p>
+        </div>
+      </div>
       <FeaturedImg />
       <article
         className="blog-post"
@@ -41,21 +79,29 @@ const BlogPostTemplate = ({ data, location }) => {
         itemType="http://schema.org/Article"
       >
         <header>
-          <TwitterShareButton
-            url={location.href}
-            title={post.frontmatter.title}
-            hashtags={["WebRTCSkyWay"]}
-          >
-            <TwitterIcon size={32} round={true} />
-          </TwitterShareButton>
-          <FacebookShareButton url={location.href}>
-            <FacebookIcon size={32} round={true} />
-          </FacebookShareButton>
-          <HatenaShareButton url={location.href} title={post.frontmatter.title}>
-            <HatenaIcon size={32} round={true} />
-          </HatenaShareButton>
-          <h1 itemProp="headline">{post.frontmatter.title}</h1>
-          <p>{post.frontmatter.date}</p>
+          <section>
+            <TwitterShareButton
+              style={{ marginRight: "10px" }}
+              url={location.href}
+              title={post.frontmatter.title}
+              hashtags={["WebRTCSkyWay"]}
+            >
+              <TwitterIcon size={32} round={true} />
+            </TwitterShareButton>
+            <FacebookShareButton style={{ marginRight: "10px" }} url={location.href}>
+              <FacebookIcon size={32} round={true} />
+            </FacebookShareButton>
+            <HatenaShareButton
+              style={{ marginRight: "10px" }}
+              url={location.href}
+              title={post.frontmatter.title}
+            >
+              <HatenaIcon size={32} round={true} />
+            </HatenaShareButton>
+            <h1 itemProp="headline">{post.frontmatter.title}</h1>
+            {/* <FeaturedImg /> */}
+            <p>{post.frontmatter.date}</p>
+          </section>
         </header>
         <section
           dangerouslySetInnerHTML={{ __html: post.html }}

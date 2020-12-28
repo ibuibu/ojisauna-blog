@@ -26,23 +26,21 @@ const PostCard = props => {
   }
 
   return (
-    <li key={post.fields.slug}>
+    <li className="post-list" key={post.fields.slug}>
       <article
         className="post-list-item"
         itemScope
         itemType="http://schema.org/Article"
       >
-        <header>
-          <FeaturedImg />
+        <FeaturedImg />
+        <section className="post-list-content">
+          <Tags tags={post.frontmatter.tags} />
           <h2>
             <Link to={post.fields.slug} itemProp="url">
               <span itemProp="headline">{title}</span>
             </Link>
           </h2>
-          <Tags tags={post.frontmatter.tags} />
           <small>{post.frontmatter.date}</small>
-        </header>
-        <section>
           <p
             dangerouslySetInnerHTML={{
               __html: post.frontmatter.description || post.excerpt,
