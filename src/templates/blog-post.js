@@ -24,6 +24,7 @@ const BlogPostTemplate = ({ data, location }) => {
         post.frontmatter.featuredImage.childImageSharp.fluid
       return (
         <Image
+          fadeIn={false}
           imgStyle={{ opacity: 0.4 }}
           style={{ background: "#000" }}
           fluid={featuredImgFluid}
@@ -88,7 +89,10 @@ const BlogPostTemplate = ({ data, location }) => {
             >
               <TwitterIcon size={32} round={true} />
             </TwitterShareButton>
-            <FacebookShareButton style={{ marginRight: "10px" }} url={location.href}>
+            <FacebookShareButton
+              style={{ marginRight: "10px" }}
+              url={location.href}
+            >
               <FacebookIcon size={32} round={true} />
             </FacebookShareButton>
             <HatenaShareButton
@@ -162,7 +166,7 @@ export const pageQuery = graphql`
       html
       frontmatter {
         title
-        date(formatString: "YYYY年M月D日")
+        date(formatString: "YYYY-M-D")
         description
         featuredImage {
           childImageSharp {

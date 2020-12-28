@@ -9,7 +9,7 @@ const PostCard = props => {
     if (post.frontmatter.featuredImage) {
       const featuredImgFluid =
         post.frontmatter.featuredImage.childImageSharp.fluid
-      return <Image fluid={featuredImgFluid} />
+      return <Image fadeIn={false} fluid={featuredImgFluid} />
     } else {
       return <></>
     }

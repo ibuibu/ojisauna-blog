@@ -345,12 +345,24 @@ a:focus {
   text-decoration: none;
 }
 
+.global-header a {
+  margin-bottom: 6rem;
+}
+
 .global-header h1 {
   font-size: 2.9rem;
-  margin-bottom: 7rem;
+  margin: 0rem;
   color: white;
 }
+
+.global-footer {
+  height: 300px;
+  background-color: #06006e;
+}
 .global-footer p {
+  font-size: 0.7rem;
+  font-weight: bold;
+  color: white;
   text-align: center;
 }
 
@@ -390,7 +402,7 @@ a:focus {
 
 .post-list-item h2 {
   font-size: var(--fontSize-2);
-  color:var(--color-text);
+  color: var(--color-text);
   margin-bottom: var(--spacing-2);
   margin-top: var(--spacing-4);
 }
