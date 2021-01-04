@@ -4,10 +4,15 @@ import Image from "gatsby-image"
 
 const Layout = ({ location, children }) => {
   const rootPath = `${__PATH_PREFIX__}/`
-  const isTop =
-    location.pathname === rootPath ||
-    location.pathname === "/updates" ||
-    location.pathname === "/engeneering"
+  const pn = location.pathname
+  const isTop = pn === rootPath || pn === "/updates" || pn === "/engeneering"
+  const pageName =
+    pn === rootPath
+      ? "SkyWay Product Blog"
+      : pn === "/updates"
+      ? "アップデート情報"
+      : "エンジニアリング"
+  console.log(pageName)
   let header
 
   const data = useStaticQuery(
@@ -53,7 +58,7 @@ const Layout = ({ location, children }) => {
         </div>
         <header className="global-header">
           <Link to="/">
-            <h1>SkyWay Product Blog</h1>
+            <h1>{pageName}</h1>
           </Link>
         </header>
       </div>
