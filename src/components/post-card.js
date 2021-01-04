@@ -36,9 +36,13 @@ const PostCard = props => {
         <section className="post-list-content">
           <Tags tags={post.frontmatter.tags} />
           <h2>
-            <Link to={post.fields.slug} itemProp="url">
-              <span itemProp="headline">{title}</span>
+            <Link
+              className="post-list-link"
+              to={post.fields.slug}
+              itemProp="url"
+            >
             </Link>
+              <p itemProp="headline">{title}</p>
           </h2>
           <small>{post.frontmatter.date}</small>
           <p
