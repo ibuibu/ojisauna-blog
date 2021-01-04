@@ -35,6 +35,34 @@ const BlogPostTemplate = ({ data, location }) => {
     }
   }
 
+  const ShareButtons = () => {
+    return (
+      <section className="share-buttons">
+        <TwitterShareButton
+          style={{ marginRight: "10px" }}
+          url={location.href}
+          title={post.frontmatter.title}
+          hashtags={["WebRTCSkyWay"]}
+        >
+          <TwitterIcon size={32} round={true} />
+        </TwitterShareButton>
+        <FacebookShareButton
+          style={{ marginRight: "10px" }}
+          url={location.href}
+        >
+          <FacebookIcon size={32} round={true} />
+        </FacebookShareButton>
+        <HatenaShareButton
+          style={{ marginRight: "10px" }}
+          url={location.href}
+          title={post.frontmatter.title}
+        >
+          <HatenaIcon size={32} round={true} />
+        </HatenaShareButton>
+      </section>
+    )
+  }
+
   return (
     <Layout location={location} title={siteTitle}>
       <SEO
@@ -80,29 +108,7 @@ const BlogPostTemplate = ({ data, location }) => {
         itemType="http://schema.org/Article"
       >
         <header>
-          <section className="share-buttons">
-            <TwitterShareButton
-              style={{ marginRight: "10px" }}
-              url={location.href}
-              title={post.frontmatter.title}
-              hashtags={["WebRTCSkyWay"]}
-            >
-              <TwitterIcon size={32} round={true} />
-            </TwitterShareButton>
-            <FacebookShareButton
-              style={{ marginRight: "10px" }}
-              url={location.href}
-            >
-              <FacebookIcon size={32} round={true} />
-            </FacebookShareButton>
-            <HatenaShareButton
-              style={{ marginRight: "10px" }}
-              url={location.href}
-              title={post.frontmatter.title}
-            >
-              <HatenaIcon size={32} round={true} />
-            </HatenaShareButton>
-          </section>
+          <ShareButtons />
           <h1 itemProp="headline">{post.frontmatter.title}</h1>
           <p>{post.frontmatter.date}</p>
         </header>
@@ -114,6 +120,7 @@ const BlogPostTemplate = ({ data, location }) => {
         {/* <footer> */}
         {/* <Bio /> */}
         {/* </footer> */}
+        <ShareButtons />
       </article>
       <nav className="blog-post-nav">
         <ul
