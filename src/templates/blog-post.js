@@ -46,7 +46,7 @@ const BlogPostTemplate = ({ data, location }) => {
         style={{
           display: "flex",
           width: "100%",
-          height: "500px",
+          height: "55vw",
           justifyContent: "center",
           alignItems: "center",
           position: "absolute",
@@ -80,7 +80,7 @@ const BlogPostTemplate = ({ data, location }) => {
         itemType="http://schema.org/Article"
       >
         <header>
-          <section>
+          <section className="share-buttons">
             <TwitterShareButton
               style={{ marginRight: "10px" }}
               url={location.href}
@@ -102,10 +102,9 @@ const BlogPostTemplate = ({ data, location }) => {
             >
               <HatenaIcon size={32} round={true} />
             </HatenaShareButton>
-            <h1 itemProp="headline">{post.frontmatter.title}</h1>
-            {/* <FeaturedImg /> */}
-            <p>{post.frontmatter.date}</p>
           </section>
+          <h1 itemProp="headline">{post.frontmatter.title}</h1>
+          <p>{post.frontmatter.date}</p>
         </header>
         <section
           dangerouslySetInnerHTML={{ __html: post.html }}
