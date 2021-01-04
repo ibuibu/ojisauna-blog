@@ -12,7 +12,6 @@ const Layout = ({ location, children }) => {
       : pn === "/updates"
       ? "アップデート情報"
       : "エンジニアリング"
-  console.log(pageName)
   let header
 
   const data = useStaticQuery(
