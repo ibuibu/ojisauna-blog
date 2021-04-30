@@ -9,7 +9,7 @@ const EngeneerTags = ({ data, location }) => {
   const posts = data.allMarkdownRemark.nodes
   return (
     <Layout location={location} title={siteTitle}>
-      <SEO title="Engeneering | SkyWay Blog" />
+      <SEO title="Engeneering | Ojisauna Blog" />
       <ol className="post-list-wrapper" style={{ listStyle: `none` }}>
         {posts.map(post => {
           return <PostCard key={post.fields.slug} post={post} />

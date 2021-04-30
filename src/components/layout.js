@@ -4,14 +4,16 @@ import Image from "gatsby-image"
 
 const Layout = ({ location, children }) => {
   const rootPath = `${__PATH_PREFIX__}/`
-  const pn = location.pathname
-  const isTop = pn === rootPath || pn === "/updates" || pn === "/engeneering"
-  const pageName =
-    pn === rootPath
-      ? "SkyWay Product Blog"
-      : pn === "/updates"
-      ? "アップデート情報"
-      : "エンジニアリング"
+  // const pn = location.pathname
+  // const isTop = pn === rootPath || pn === "/updates" || pn === "/engeneering"
+  // const pageName =
+  //   pn === rootPath
+  //     ? "Ojisauna Blog"
+  //     : pn === "/updates"
+  //     ? "アップデート情報"
+  //     : "エンジニアリング"
+  const isTop = true
+  const pageName = "Ojisauna Blog"
   let header
 
   const data = useStaticQuery(
@@ -24,7 +26,7 @@ const Layout = ({ location, children }) => {
             }
           }
         }
-        estFluid: file(relativePath: { eq: "aa.png" }) {
+        estFluid: file(relativePath: { eq: "logo.png" }) {
           childImageSharp {
             fluid(maxWidth: 300) {
               ...GatsbyImageSharpFluid
@@ -48,11 +50,8 @@ const Layout = ({ location, children }) => {
             </Link>
           </div>
           <div className="navbar-link">
-            <Link to="/updates">アップデート情報</Link>
-            <Link to="/engeneering">エンジニアリング</Link>
-            <Link to="https://webrtc.ecl.ntt.com" target="_blank">
-              公式サイト□
-            </Link>
+            <Link to="#">ニュース</Link>
+            <Link to="#">SNS</Link>
           </div>
         </div>
         <header className="global-header">
@@ -99,12 +98,9 @@ const Layout = ({ location, children }) => {
       <main>{children}</main>
       <footer className="global-footer">
         <p>
-          {/* © {new Date().getFullYear()} */}
-          {/* {` `} */}
-          © NTT Communications Corporation All Rights Reserved.
-          <br />
-          <br />
-          <a href="https://webrtc.ecl.ntt.com/">SkyWay</a>
+          © {new Date().getFullYear()}
+          {` `}
+          Ojisauna
         </p>
       </footer>
     </div>

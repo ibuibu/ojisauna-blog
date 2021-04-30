@@ -1,5 +1,5 @@
 ---
-title: WebRTCって最高
+title: 最高
 date: "2015-05-06T23:46:37.121Z"
 featuredImage: add-reviewer-ogp.webp
 tags: ['Update']

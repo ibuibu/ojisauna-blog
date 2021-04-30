@@ -4,11 +4,12 @@ import { Link } from "gatsby"
 
 const PostCard = props => {
   const post = props.post
-  const title = post.frontmatter.title || post.fields.slug
+  console.log('hoge', post)
+  const title = post.title
   const FeaturedImg = () => {
-    if (post.frontmatter.featuredImage) {
+    if (post.featuredImage) {
       const featuredImgFluid =
-        post.frontmatter.featuredImage.childImageSharp.fluid
+        post.featuredImage.childImageSharp.fluid
       return <Image fadeIn={false} fluid={featuredImgFluid} />
     } else {
       return <></>
@@ -26,7 +27,7 @@ const PostCard = props => {
   }
 
   return (
-    <li className="post-list" key={post.fields.slug}>
+    <li className="post-list" key={post.slug}>
       <article
         className="post-list-item"
         itemScope
@@ -34,20 +35,20 @@ const PostCard = props => {
       >
         <FeaturedImg />
         <section className="post-list-content">
-          <Tags tags={post.frontmatter.tags} />
+          <Tags tags={post.tags} />
           <h2>
             <Link
               className="post-list-link"
-              to={post.fields.slug}
+              to={"post/" + post.slug}
               itemProp="url"
             >
             </Link>
               <p itemProp="headline">{title}</p>
           </h2>
-          <small>{post.frontmatter.date}</small>
+          <small>{post.date}</small>
           <p
             dangerouslySetInnerHTML={{
-              __html: post.frontmatter.description || post.excerpt,
+              __html: post.description || post.excerpt,
             }}
             itemProp="description"
           />

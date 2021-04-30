@@ -1,14 +1,18 @@
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
+
 module.exports = {
   siteMetadata: {
-    title: `SkyWay Product Blog`,
+    title: `Ojisauna Blog`,
     author: {
-      name: `Kyle Mathews`,
+      name: `Hiroki Ibuka`,
       summary: `who lives and works in San Francisco building useful things.`,
     },
-    description: `SkyWay Product Blog`,
+    description: `Ojisauna Blog`,
     siteUrl: `https://gatsby-starter-blog-demo.netlify.app/`,
     social: {
-      twitter: `SkyWay Team`,
+      twitter: `Ojisauna Team`,
     },
   },
   plugins: [
@@ -73,5 +77,14 @@ module.exports = {
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
+    {
+      resolve: `gatsby-source-contentful`,
+      options: {
+        spaceId: `vth7hh2igw27`,
+        // Learn about environment variables: https://gatsby.dev/env-vars
+        accessToken: process.env.GATSBY_CONTENTFUL_ACCESS_TOKEN,
+      },
+    },
+
   ],
 }

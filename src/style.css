@@ -304,7 +304,7 @@ a:focus {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 20rem;
+  height: 10rem;
 }
 
 @-webkit-keyframes AnimationName {
@@ -356,12 +356,12 @@ a:focus {
 }
 
 .global-footer {
-  height: 300px;
+  height: 200px;
   background-color: #777;
 }
 
 .global-footer p {
-  font-size: 0.7rem;
+  font-size: 1rem;
   font-weight: bold;
   color: white;
   text-align: center;
