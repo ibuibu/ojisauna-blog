@@ -12,7 +12,7 @@ const EngeneerTags = ({ data, location }) => {
       <SEO title="Engeneering | Ojisauna Blog" />
       <ol className="post-list-wrapper" style={{ listStyle: `none` }}>
         {posts.map(post => {
-          return <PostCard key={post.fields.slug} post={post} />
+          return <PostCard key={post.slug} post={post} />
         })}
       </ol>
     </Layout>
