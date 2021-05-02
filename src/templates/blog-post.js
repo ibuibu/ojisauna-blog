@@ -1,13 +1,12 @@
-// src/templates/post.js
 import React from "react"
 import Layout from "../components/layout";
 
-export default function Post({ pageContext }) {
+export default function Post({ location, pageContext }) {
     const { title, updatedAt } = pageContext.post;
     const body = pageContext.post.body.childMarkdownRemark.html;
 
     return (
-        <Layout>
+        <Layout location={location}>
             <article
                 className="blog-post"
                 itemScope

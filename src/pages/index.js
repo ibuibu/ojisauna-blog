@@ -5,12 +5,15 @@ import Layout from "../components/layout"
 import PostCard from "../components/post-card"
 import SEO from "../components/seo"
 
-const IndexPage = () => {
+const IndexPage = ({location}) => {
   const data = useStaticQuery(graphql`
     query allContentfulAsset {
       allContentfulBlogPost {
         nodes {
           id
+          heroImage {
+            gatsbyImageData(width: 320)
+          }
           title
           slug
           tags
@@ -23,7 +26,7 @@ const IndexPage = () => {
     }
   `)
   return (
-    <Layout>
+    <Layout location={location}>
       <SEO title="Home" />
       <ol className="post-list-wrapper" style={{ listStyle: `none` }}>
       {data.allContentfulBlogPost.nodes.map((post) => {

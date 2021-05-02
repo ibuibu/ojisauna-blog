@@ -1,41 +1,17 @@
 import React from "react"
-import { Link, useStaticQuery, graphql } from "gatsby"
-import Image from "gatsby-image"
+import { Link } from "gatsby"
+import { StaticImage } from "gatsby-plugin-image"
 
 const Layout = ({ location, children }) => {
   const rootPath = `${__PATH_PREFIX__}/`
-  // const pn = location.pathname
-  // const isTop = pn === rootPath || pn === "/updates" || pn === "/engeneering"
-  // const pageName =
-  //   pn === rootPath
-  //     ? "Ojisauna Blog"
-  //     : pn === "/updates"
-  //     ? "アップデート情報"
-  //     : "エンジニアリング"
-  const isTop = true
-  const pageName = "Ojisauna Blog"
+  const pn = location.pathname
+  const isTop = pn === rootPath || pn === "/about"
+  const pageName =
+    pn === rootPath
+      ? "東京オジサウナ"
+      : "ABOUT"
   let header
 
-  const data = useStaticQuery(
-    graphql`
-      {
-        estFixed: file(relativePath: { eq: "logo.png" }) {
-          childImageSharp {
-            fixed(width: 300) {
-              ...GatsbyImageSharpFixed
-            }
-          }
-        }
-        estFluid: file(relativePath: { eq: "logo.png" }) {
-          childImageSharp {
-            fluid(maxWidth: 300) {
-              ...GatsbyImageSharpFluid
-            }
-          }
-        }
-      }
-    `
-  )
 
   if (isTop) {
     header = (
@@ -43,14 +19,14 @@ const Layout = ({ location, children }) => {
         <div className="navbar">
           <div style={{ width: "150px", margin: "1.2rem", marginLeft: "5rem" }}>
             <Link to="/">
-              <Image
-                fadeIn={false}
-                fluid={data.estFluid.childImageSharp.fluid}
-              ></Image>
+              <StaticImage
+                alt="logo"
+                src="../assets/logo.png"
+              ></StaticImage>
             </Link>
           </div>
           <div className="navbar-link">
-            <Link to="#">ニュース</Link>
+            <Link to="#">アバウト</Link>
             <Link to="#">SNS</Link>
           </div>
         </div>
@@ -74,18 +50,15 @@ const Layout = ({ location, children }) => {
         <div className="navbar">
           <div style={{ width: "150px", margin: "1.2rem", marginLeft: "5rem" }}>
             <Link to="/">
-              <Image
-                fadeIn={false}
-                fluid={data.estFluid.childImageSharp.fluid}
-              ></Image>
+              <StaticImage
+                alt="logo"
+                src="../content/assets/logo.png"
+              ></StaticImage>
             </Link>
           </div>
           <div className="navbar-link">
-            <Link to="/updates">アップデート情報</Link>
-            <Link to="/engeneering">エンジニアリング</Link>
-            <Link to="https://webrtc.ecl.ntt.com" target="_blank">
-              公式サイト□
-            </Link>
+            <Link to="#">アバウト</Link>
+            <Link to="#">SNS</Link>
           </div>
         </div>
       </div>

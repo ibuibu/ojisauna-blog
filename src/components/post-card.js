@@ -1,20 +1,11 @@
 import React from "react"
-import Image from "gatsby-image"
 import { Link } from "gatsby"
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
 const PostCard = props => {
   const post = props.post
-  console.log('hoge', post)
   const title = post.title
-  const FeaturedImg = () => {
-    if (post.featuredImage) {
-      const featuredImgFluid =
-        post.featuredImage.childImageSharp.fluid
-      return <Image fadeIn={false} fluid={featuredImgFluid} />
-    } else {
-      return <></>
-    }
-  }
+  const image = getImage(post.heroImage)
 
   const Tags = ({ tags }) => {
     return (
@@ -33,7 +24,7 @@ const PostCard = props => {
         itemScope
         itemType="http://schema.org/Article"
       >
-        <FeaturedImg />
+        <GatsbyImage image={image} alt={title} />
         <section className="post-list-content">
           <Tags tags={post.tags} />
           <h2>
