@@ -8,12 +8,8 @@ const Layout = ({ location, children }) => {
   const rootPath = `${__PATH_PREFIX__}/`
   const pn = location.pathname
   const isTop = pn === rootPath || pn === "/about"
-  const pageName =
-    pn === rootPath
-      ? "東京オジサウナ"
-      : "ABOUT"
+  const pageName = pn === rootPath ? "東京オジサウナ" : "ABOUT"
   let header
-
 
   if (isTop) {
     header = (
@@ -25,11 +21,17 @@ const Layout = ({ location, children }) => {
           </div> */}
         </div>
         <header className="global-header">
-          <img src={Logo}/>
+          <img className="top-logo" src={Logo} />
+          <video
+            className="top-video"
+            src={TopVideo}
+            playsInline
+            controls
+            loop
+            autoPlay
+            muted
+          />
         </header>
-        <div className="top-video-wrapper">
-          <video className="top-video" src={TopVideo} playsInline controls loop autoPlay muted/>
-        </div>
       </div>
     )
   } else {

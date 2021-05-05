@@ -292,23 +292,23 @@ a:focus {
 }
 
 /* .global-header-wrapper { */
-  /* background: linear-gradient(315deg, #06006e, #326bff, #7bb2ff);
+/* background: linear-gradient(315deg, #06006e, #326bff, #7bb2ff);
   background-size: 200% 200%;
   -webkit-animation: AnimationName 15s ease infinite;
   -moz-animation: AnimationName 15s ease infinite;
   animation: AnimationName 15s ease infinite; */
 /* } */
 
+.global-header-wrapper {
+  height: 60vw;
+  max-height: 700px;
+}
+
 .global-header {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-}
-
-.global-header img{
-  max-width: 800px;
-  margin: 2rem;
 }
 
 @-webkit-keyframes AnimationName {
@@ -346,21 +346,25 @@ a:focus {
 }
 
 .global-header {
+  position: relative;
   text-decoration: none;
-}
-
-.global-header a {
-  margin: 2rem;
-}
-.top-video-wrapper {
   text-align: center;
   margin: 0 1rem;
 }
 
+.top-logo {
+  z-index: 2;
+  max-width: 1000px;
+  margin-top: 2vw; /* maxをいれたい */
+}
+
 .top-video {
+  position: absolute;
+  z-index: 1;
+  top: 8vw;
   border-radius: 10px;
   width: 100%;
-  max-width: 800px;
+  max-width: 1000px;
 }
 
 .global-footer {
