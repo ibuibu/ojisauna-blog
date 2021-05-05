@@ -28,7 +28,7 @@ const Layout = ({ location, children }) => {
           <img src={Logo}/>
         </header>
         <div className="top-video-wrapper">
-          <video className="top-video" src={TopVideo} playsInLine controls loop autoPlay muted/>
+          <video className="top-video" src={TopVideo} playsInline controls loop autoPlay muted/>
         </div>
       </div>
     )
