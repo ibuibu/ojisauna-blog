@@ -2,7 +2,7 @@ import React from "react"
 import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
 import Logo from "../assets/ojilogo.svg"
-import TopVideo from "../assets/topvideo.mp4"
+import TopVideo from "../assets/topvideo2.mp4"
 
 const Layout = ({ location, children }) => {
   const rootPath = `${__PATH_PREFIX__}/`
