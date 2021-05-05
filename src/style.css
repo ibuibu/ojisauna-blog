@@ -354,12 +354,12 @@ a:focus {
 }
 .top-video-wrapper {
   text-align: center;
+  margin: 0 1rem;
 }
 
 .top-video {
   border-radius: 10px;
-  margin: 0 2rem;
-  width: 80%;
+  width: 100%;
   max-width: 800px;
 }
 
