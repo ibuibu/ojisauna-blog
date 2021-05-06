@@ -32,9 +32,11 @@
   /* --fontFamily-sans: Montserrat, system-ui, -apple-system, BlinkMacSystemFont,
     "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
     "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; */
-  --fontFamily-sans: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN",
+  /* --fontFamily-sans: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN",
     "Hiragino Sans", Meiryo, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
-    "Segoe UI Symbol", "Noto Color Emoji";
+    "Segoe UI Symbol", "Noto Color Emoji"; */
+
+  --fontFamily-sans: "DM Sans", dnp-shuei-gothic-kin-std, sans-serif;
   --fontFamily-serif: "Merriweather", "Georgia", Cambria, "Times New Roman",
     Times, serif;
   /* --font-body: var(--fontFamily-serif); */
@@ -50,7 +52,8 @@
   --lineHeight-none: 1;
   --lineHeight-tight: 1.1;
   --lineHeight-normal: 1.5;
-  --lineHeight-relaxed: 1.625;
+  /* --lineHeight-relaxed: 1.625; */
+  --lineHeight-relaxed: 2;
   /* 1.200 Minor Third Type Scale */
   --fontSize-0: 0.833rem;
   --fontSize-1: 1rem;
@@ -62,7 +65,7 @@
   --fontSize-7: 2.986rem;
   /* --color-primary: #005b99; */
   --color-primary: #326bff;
-  --color-text: #3f3f3f;
+  --color-text: #2e2e2e;
   --color-text-light: #4f5969;
   --color-heading: #1a202c;
   /* --color-heading-black: black; */
@@ -174,6 +177,8 @@ p {
   --x-height-multiplier: 0.35;
   margin: var(--spacing-0) var(--spacing-0) var(--spacing-8) var(--spacing-0);
   padding: var(--spacing-0);
+  letter-spacing: .04rem;
+  font-size: 0.9rem;
 }
 
 ul,
@@ -478,7 +483,7 @@ a:focus {
 .blog-post {
   max-width: 50rem;
   margin: auto;
-  padding: var(--spacing-12);
+  padding: var(--spacing-6);
   background-color: white;
 }
 
