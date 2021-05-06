@@ -11,12 +11,15 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
         edges {
           node {
             title
+            heroImage {
+              gatsbyImageData
+            }
             body {
               childMarkdownRemark {
                 html
               }
             }
-            updatedAt(locale: "ja-JP", formatString: "YYYY年MM月DD日")
+            updatedAt(locale: "ja-JP", formatString: "YYYY.MM.DD")
             description {
               description
             }
