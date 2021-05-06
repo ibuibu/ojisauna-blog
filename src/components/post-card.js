@@ -36,7 +36,7 @@ const PostCard = props => {
             </Link>
               <p itemProp="headline">{title}</p>
           </h2>
-          <small>{post.date}</small>
+          <small>{post.updatedAt}</small>
           <p
             dangerouslySetInnerHTML={{
               __html: post.description || post.excerpt,

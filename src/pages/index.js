@@ -17,7 +17,7 @@ const IndexPage = ({location}) => {
           title
           slug
           tags
-          createdAt
+          updatedAt(locale: "ja-JP", formatString: "YYYY.MM.DD")
           body {
             body
           }
