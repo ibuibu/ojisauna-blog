@@ -27,16 +27,13 @@ const PostCard = props => {
         <GatsbyImage image={image} alt={title} />
         <section className="post-list-content">
           <Tags tags={post.tags} />
-          <h2>
-            <Link
-              className="post-list-link"
-              to={"post/" + post.slug}
-              itemProp="url"
-            >
-            </Link>
-              <p itemProp="headline">{title}</p>
-          </h2>
-          <small>{post.updatedAt}</small>
+          <Link
+            className="post-list-link"
+            to={"post/" + post.slug}
+            itemProp="url"
+          ></Link>
+          <h2 itemProp="headline">{title}</h2>
+          {/* <small className="post-link-date">{post.updatedAt}</small> */}
           <p
             dangerouslySetInnerHTML={{
               __html: post.description || post.excerpt,
