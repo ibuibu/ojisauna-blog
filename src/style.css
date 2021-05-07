@@ -528,6 +528,7 @@ a:focus {
 .gatsby-highlight {
   margin-bottom: var(--spacing-8);
 }
+
 .sns-links {
   margin-top: 2rem;
 }
@@ -537,6 +538,9 @@ a:focus {
 }
 .sns-links svg{
   color: white;
+
+.gatsby-image-wrapper-constrained{
+  display: block;
 }
 
 /* Media queries */
