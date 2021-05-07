@@ -464,7 +464,7 @@ a:focus {
 .tags a {
   font-size: 0.8rem;
   list-style: none;
-  padding: 0.4rem 0.6rem;
+  padding: 6px 0.6rem;
   margin-right: 1rem;
   border-radius: 10px 10px 0 0;
   border: solid;
@@ -528,9 +528,14 @@ a:focus {
 .gatsby-highlight {
   margin-bottom: var(--spacing-8);
 }
+.sns-links {
+  margin-top: 2rem;
+}
 
-.sns-links svg{
+.sns-links a{
   margin: 1rem;
+}
+.sns-links svg{
   color: white;
 }
 

@@ -54,10 +54,10 @@ const Layout = ({ location, children }) => {
       <footer className="global-footer">
         <p className="sns-links">
           <a href="https://www.instagram.com/tokyoojisauna/" target="_blank">
-            <AiOutlineInstagram size={70} />
+            <AiOutlineInstagram size={54} />
           </a>
           <a href="https://twitter.com/tokyoojisauna/" target="_blank">
-            <FiTwitter size={70} />
+            <FiTwitter size={54} />
           </a>
         </p>
         <p>
