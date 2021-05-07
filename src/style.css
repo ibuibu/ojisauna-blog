@@ -529,6 +529,11 @@ a:focus {
   margin-bottom: var(--spacing-8);
 }
 
+.sns-links svg{
+  margin: 1rem;
+  color: white;
+}
+
 /* Media queries */
 
 @media (max-width: 42rem) {

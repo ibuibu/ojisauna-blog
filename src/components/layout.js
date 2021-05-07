@@ -1,6 +1,8 @@
 import React from "react"
 import Logo from "../assets/ojilogo.svg"
 import TopVideo from "../assets/topvideo.mp4"
+import { AiOutlineInstagram } from "react-icons/ai"
+import { FiTwitter } from "react-icons/fi"
 
 const Layout = ({ location, children }) => {
   const rootPath = `${__PATH_PREFIX__}/`
@@ -41,8 +43,7 @@ const Layout = ({ location, children }) => {
           display: "flex",
           width: "100%",
         }}
-      >
-      </div>
+      ></div>
     )
   }
 
@@ -51,6 +52,14 @@ const Layout = ({ location, children }) => {
       {header}
       <main>{children}</main>
       <footer className="global-footer">
+        <p className="sns-links">
+          <a href="https://www.instagram.com/tokyoojisauna/" target="_blank">
+            <AiOutlineInstagram size={70} />
+          </a>
+          <a href="https://twitter.com/tokyoojisauna/" target="_blank">
+            <FiTwitter size={70} />
+          </a>
+        </p>
         <p>
           © {new Date().getFullYear()}
           {` `}
