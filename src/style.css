@@ -528,6 +528,9 @@ a:focus {
 .gatsby-highlight {
   margin-bottom: var(--spacing-8);
 }
+.gatsby-image-wrapper-constrained{
+  display: block;
+}
 
 /* Media queries */
 

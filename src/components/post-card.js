@@ -24,7 +24,12 @@ const PostCard = props => {
         itemScope
         itemType="http://schema.org/Article"
       >
-        <GatsbyImage image={image} alt={title} />
+        <Link
+          to={"post/" + post.slug}
+          itemProp="url"
+        >
+          <GatsbyImage image={image} alt={title} />
+        </Link>
         <section className="post-list-content">
           <Tags tags={post.tags} />
           <Link
