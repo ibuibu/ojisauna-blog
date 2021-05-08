@@ -2,16 +2,17 @@ require("dotenv").config()
 
 module.exports = {
   siteMetadata: {
-    title: `Ojisauna Blog`,
+    title: `東京オジサウナ`,
     author: {
       name: `Hiroki Ibuka`,
       summary: `who lives and works in San Francisco building useful things.`,
     },
-    description: `Ojisauna Blog`,
-    siteUrl: `https://gatsby-starter-blog-demo.netlify.app/`,
+    description: `東京オジサウナ`,
+    siteUrl: `https://ojisauna.com`,
     social: {
-      twitter: `Ojisauna Team`,
+      twitter: `@ojisauna`,
     },
+    ogpImage: `/ogp.png`
   },
   plugins: [
     {

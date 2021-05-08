@@ -18,9 +18,11 @@ const SEO = ({ description, lang, meta, title }) => {
           siteMetadata {
             title
             description
+            siteUrl
             social {
               twitter
             }
+            ogpImage
           }
         }
       }
@@ -28,6 +30,8 @@ const SEO = ({ description, lang, meta, title }) => {
   )
 
   const metaDescription = description || site.siteMetadata.description
+  const url = site.siteMetadata.siteUrl
+  const ogpImage = site.siteMetadata.ogpImage
   const defaultTitle = site.siteMetadata?.title
   const isRoute = defaultTitle === title
 
@@ -48,6 +52,10 @@ const SEO = ({ description, lang, meta, title }) => {
           content: metaDescription,
         },
         {
+          property: `og:url`,
+          content: url,
+        },
+        {
           property: `og:title`,
           content: title,
         },
@@ -60,20 +68,24 @@ const SEO = ({ description, lang, meta, title }) => {
           content: `website`,
         },
         {
+          property: `og:image`,
+          content: `${url}${ogpImage}`,
+        },
+        {
+          property: `og:site_name`,
+          content: defaultTitle,
+        },
+        {
           name: `twitter:card`,
           content: `summary`,
         },
         {
-          name: `twitter:creator`,
+          name: `twitter:site`,
           content: site.siteMetadata?.social?.twitter || ``,
         },
         {
-          name: `twitter:title`,
-          content: title,
-        },
-        {
-          name: `twitter:description`,
-          content: metaDescription,
+          name: `twitter:creator`,
+          content: site.siteMetadata?.social?.twitter || ``,
         },
       ].concat(meta)}
     />

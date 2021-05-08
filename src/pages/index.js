@@ -27,7 +27,7 @@ const IndexPage = ({location}) => {
   `)
   return (
     <Layout location={location}>
-      <SEO title="Home" />
+      <SEO title="東京オジサウナ" />
       <ol className="post-list-wrapper" style={{ listStyle: `none` }}>
       {data.allContentfulBlogPost.nodes.map((post) => {
         return <PostCard key={post.id} post={post} />

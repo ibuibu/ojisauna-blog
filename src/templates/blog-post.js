@@ -1,16 +1,20 @@
 import React from "react"
 import Layout from "../components/layout"
+import SEO from "../components/seo"
 import { Link } from "gatsby"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import Logo from "../assets/ojilogo.svg"
 
 export default function Post({ location, pageContext }) {
-  const { title, updatedAt } = pageContext.post
+  const post = pageContext.post
+  const { title, updatedAt } = post
+  const description = post.description.description
   const image = getImage(pageContext.post.heroImage)
   const body = pageContext.post.body.childMarkdownRemark.html
 
   return (
     <Layout location={location}>
+      <SEO title={title} description={description}/>
       <div
         itemProp="headline"
         style={{
@@ -60,7 +64,11 @@ export default function Post({ location, pageContext }) {
           </p>
         </div>
       </div>
-      <GatsbyImage style={{ width: "100%", display: "block"}} image={image} alt={title} />
+      <GatsbyImage
+        style={{ width: "100%", display: "block" }}
+        image={image}
+        alt={title}
+      />
       <article
         className="blog-post"
         itemScope
