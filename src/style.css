@@ -431,9 +431,8 @@ a:focus {
 
 .post-list-content {
   position: absolute;
-  top: 0;
+  bottom: 0;
   padding: var(--spacing-2);
-  padding-top: 13.5rem;
   z-index: 30;
 }
 .post-link-date {
