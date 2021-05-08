@@ -60,7 +60,7 @@ export default function Post({ location, pageContext }) {
           </p>
         </div>
       </div>
-      <GatsbyImage style={{ width: "100%" }} image={image} alt={title} />
+      <GatsbyImage style={{ width: "100%", display: "block"}} image={image} alt={title} />
       <article
         className="blog-post"
         itemScope
