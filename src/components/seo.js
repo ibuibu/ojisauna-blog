@@ -44,10 +44,6 @@ const SEO = ({ description, lang, meta, title }) => {
       titleTemplate={isRoute ? defaultTitle : `%s | ${defaultTitle}`}
       meta={[
         {
-          name: `robots`,
-          content: `noindex`,
-        },
-        {
           name: `description`,
           content: metaDescription,
         },
