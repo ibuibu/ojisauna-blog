@@ -449,11 +449,11 @@ a:focus {
   background-color: white;
   color: black;
   padding: 0.8rem;
-  border-radius: 0 10px 10px 10px;
-  border: solid;
-  border-width: 1px;
+  /* border-radius: 0 10px 10px 10px; */
+  /* border: solid; */
+  /* border-width: 1px; */
   margin-bottom: var(--spacing-2);
-  margin-top: 0.15rem;
+  margin-top: 0rem;
 }
 
 .post-list-item header {
@@ -465,10 +465,10 @@ a:focus {
   list-style: none;
   padding: 0.35rem 0.6rem;
   margin-right: 1rem;
-  border-radius: 10px 10px 0 0;
-  border: solid;
-  border-width: 1px;
-  font-weight: bold;
+  /* border-radius: 10px 10px 0 0; */
+  /* border: solid; */
+  /* border-width: 1px; */
+  /* font-weight: bold; */
   color: black;
   background-color: white;
 }
