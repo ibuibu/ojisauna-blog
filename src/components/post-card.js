@@ -6,6 +6,8 @@ const PostCard = props => {
   const post = props.post
   const title = post.title
   const image = getImage(post.heroImage)
+  const shape = props.shape;
+  console.log(shape)
 
   const Tags = ({ tags }) => {
     return (
@@ -28,7 +30,7 @@ const PostCard = props => {
           to={"post/" + post.slug}
           itemProp="url"
         >
-          <GatsbyImage image={image} alt={title} />
+          <GatsbyImage image={image} alt={title} imgStyle={{borderRadius: shape, display: "inline"}}/>
         </Link>
         <section className="post-list-content">
           <Tags tags={post.tags} />
