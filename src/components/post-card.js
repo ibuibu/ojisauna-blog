@@ -7,7 +7,6 @@ const PostCard = props => {
   const title = post.title
   const image = getImage(post.heroImage)
   const shape = props.shape;
-  console.log(shape)
 
   const Tags = ({ tags }) => {
     return (
