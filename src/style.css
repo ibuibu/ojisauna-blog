@@ -257,7 +257,8 @@ a:focus {
 .global-wrapper {
   margin: var(--spacing-0) auto;
   max-width: var(--maxWidth-wrapper);
-  background-color: #f7e1d7;
+  /* background-color: #f7e1d7; */
+  background-color: white;
 }
 
 .global-wrapper[data-is-root-path="true"] .bio {
@@ -417,7 +418,7 @@ a:focus {
 /* } */
 
 .post-list-item img {
-  border-radius: 10px;
+  display: none;
 }
 
 .post-list-link {
@@ -445,15 +446,14 @@ a:focus {
 
 .post-list-item h2 {
   font-size: var(--fontSize-2);
-  /* color: var(--color-text); */
   background-color: white;
   color: black;
   padding: 0.8rem;
-  border-radius: 0 10px 10px 10px;
-  border: solid;
-  border-width: 1px;
   margin-bottom: var(--spacing-2);
-  margin-top: 0.15rem;
+  margin-top: -1px;
+  border: solid;
+  border-color: black;
+  border-width: 2px;
 }
 
 .post-list-item header {
@@ -461,14 +461,13 @@ a:focus {
 }
 
 .tags a {
+  border: solid;
+  border-color: black;
+  border-width: 2px 2px 0 2px;
   font-size: 0.8rem;
   list-style: none;
   padding: 0.35rem 0.6rem;
   margin-right: 1rem;
-  border-radius: 10px 10px 0 0;
-  border: solid;
-  border-width: 1px;
-  font-weight: bold;
   color: black;
   background-color: white;
 }

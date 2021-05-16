@@ -21,7 +21,7 @@ const Layout = ({ location, children }) => {
           </div> */}
         </div>
         <header className="global-header">
-          <img className="top-logo" src={Logo} />
+          <img className="top-logo" src={Logo} width="90%"/>
           <video
             className="top-video"
             src={TopVideo}
