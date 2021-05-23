@@ -54,15 +54,15 @@ const Layout = ({ location, children }) => {
       <main>{children}</main>
       <footer className="global-footer">
         <p className="sns-links">
-          <a href="https://twitter.com/tokyoojisauna/" target="_blank">
-            <FiTwitter size={54} />
-          </a>
           <a href="https://www.instagram.com/tokyoojisauna/" target="_blank">
             <AiOutlineInstagram size={54} />
           </a>
-          <a href="https://open.spotify.com/user/31m4lj5xn2ldjgh75o75ua2qr2hy?si=fee067d55d7f4379" target="_blank">
-            <GrSpotify size={54} />
+          <a href="https://twitter.com/tokyoojisauna/" target="_blank">
+            <FiTwitter size={54} />
           </a>
+          {/* <a href="https://open.spotify.com/user/31m4lj5xn2ldjgh75o75ua2qr2hy?si=fee067d55d7f4379" target="_blank">
+            <GrSpotify size={54} />
+          </a> */}
         </p>
         <p>
           © {new Date().getFullYear()}
