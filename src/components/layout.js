@@ -3,6 +3,7 @@ import Logo from "../assets/ojilogo.svg"
 import TopVideo from "../assets/topvideo.mp4"
 import { AiOutlineInstagram } from "react-icons/ai"
 import { FiTwitter } from "react-icons/fi"
+import { GrSpotify } from "react-icons/gr"
 
 const Layout = ({ location, children }) => {
   const rootPath = `${__PATH_PREFIX__}/`
@@ -21,7 +22,7 @@ const Layout = ({ location, children }) => {
           </div> */}
         </div>
         <header className="global-header">
-          <img className="top-logo" src={Logo} width="90%"/>
+          <img className="top-logo" src={Logo} width="90%" />
           <video
             className="top-video"
             src={TopVideo}
@@ -53,11 +54,14 @@ const Layout = ({ location, children }) => {
       <main>{children}</main>
       <footer className="global-footer">
         <p className="sns-links">
+          <a href="https://twitter.com/tokyoojisauna/" target="_blank">
+            <FiTwitter size={54} />
+          </a>
           <a href="https://www.instagram.com/tokyoojisauna/" target="_blank">
             <AiOutlineInstagram size={54} />
           </a>
-          <a href="https://twitter.com/tokyoojisauna/" target="_blank">
-            <FiTwitter size={54} />
+          <a href="https://open.spotify.com/user/31m4lj5xn2ldjgh75o75ua2qr2hy?si=fee067d55d7f4379" target="_blank">
+            <GrSpotify size={54} />
           </a>
         </p>
         <p>
