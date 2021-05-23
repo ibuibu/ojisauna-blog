@@ -14,7 +14,7 @@ export default function Post({ location, pageContext }) {
 
   return (
     <Layout location={location}>
-      <SEO title={title} description={description}/>
+      <SEO title={title} description={description} />
       <div
         itemProp="headline"
         style={{
@@ -22,8 +22,6 @@ export default function Post({ location, pageContext }) {
           flexDirection: "column",
           width: "100%",
           height: "55vw",
-          // justifyContent: "center",
-          // alignItems: "center",
           position: "absolute",
           zIndex: 2,
         }}
@@ -64,11 +62,14 @@ export default function Post({ location, pageContext }) {
           </p>
         </div>
       </div>
-      <GatsbyImage
-        style={{ width: "100%", display: "block" }}
-        image={image}
-        alt={title}
-      />
+      <div className="mask">
+        <GatsbyImage
+          style={{ width: "100%", display: "block", background: "black" }}
+          image={image}
+          imgClassName="post-bg"
+          alt={title}
+        />
+      </div>
       <article
         className="blog-post"
         itemScope
