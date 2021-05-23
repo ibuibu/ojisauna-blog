@@ -7,8 +7,7 @@ import Logo from "../assets/ojilogo.svg"
 
 export default function Post({ location, pageContext }) {
   const post = pageContext.post
-  const author = post.author
-  const { title, updatedAt } = post
+  const { title, createdAt, author } = post
   const description = post.description.description
   const image = getImage(pageContext.post.heroImage)
   const body = pageContext.post.body.childMarkdownRemark.html
@@ -67,7 +66,7 @@ export default function Post({ location, pageContext }) {
               color: "white",
             }}
           >
-            {updatedAt}
+            {createdAt}
           </p>
         </div>
       </div>

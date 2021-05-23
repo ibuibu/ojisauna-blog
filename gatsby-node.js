@@ -20,6 +20,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
               }
             }
             updatedAt(locale: "ja-JP", formatString: "YYYY.MM.DD")
+            createdAt(locale: "ja-JP", formatString: "YYYY.MM.DD")
             description {
               description
             }
