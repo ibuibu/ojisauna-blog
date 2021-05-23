@@ -7,6 +7,7 @@ import Logo from "../assets/ojilogo.svg"
 
 export default function Post({ location, pageContext }) {
   const post = pageContext.post
+  const author = post.author
   const { title, updatedAt } = post
   const description = post.description.description
   const image = getImage(pageContext.post.heroImage)
@@ -53,6 +54,14 @@ export default function Post({ location, pageContext }) {
           >
             {title}
           </h1>
+          <h5
+            style={{
+              color: "white",
+              fontWeight: "bold"
+            }}
+          >
+            {author.name}
+          </h5>
           <p
             style={{
               color: "white",
