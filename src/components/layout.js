@@ -3,36 +3,61 @@ import Logo from "../assets/ojilogo.svg"
 import TopVideo from "../assets/topvideo.mp4"
 import { AiOutlineInstagram } from "react-icons/ai"
 import { FiTwitter } from "react-icons/fi"
-import { GrSpotify } from "react-icons/gr"
+import { StaticImage, withArtDirection } from "gatsby-plugin-image"
+// import { GrSpotify } from "react-icons/gr"
 
 const Layout = ({ location, children }) => {
   const rootPath = `${__PATH_PREFIX__}/`
   const pn = location.pathname
-  const isTop = pn === rootPath || pn === "/about"
-  const pageName = pn === rootPath ? "東京オジサウナ" : "ABOUT"
+  const isTop = pn === rootPath
   let header
 
   if (isTop) {
     header = (
-      <div className="global-header-wrapper">
-        <div className="navbar">
-          {/* <div className="navbar-link">
-            <Link to="#">アバウト</Link>
-            <Link to="#">SNS</Link>
-          </div> */}
+      <div>
+        <div className="global-header-wrapper">
+          <header className="global-header">
+            <img className="top-logo" src={Logo} width="90%" />
+            <video
+              className="top-video"
+              src={TopVideo}
+              playsInline
+              controls
+              loop
+              autoPlay
+              muted
+            />
+          </header>
         </div>
-        <header className="global-header">
-          <img className="top-logo" src={Logo} width="90%" />
-          <video
-            className="top-video"
-            src={TopVideo}
-            playsInline
-            controls
-            loop
-            autoPlay
-            muted
-          />
-        </header>
+        <section className="profile-area">
+          <p className="profile-desc">
+            サウナと散歩を愛するおじさん3人組。
+            <br />
+            ささやかな日々の営みを、
+            <br />
+            不定期に更新していきます。
+          </p>
+          <div className="profile-photos">
+            <div style={{ margin: "10px" }}>
+              <StaticImage
+                src="../assets/prof_ibu.svg"
+                alt="ibu"
+              />
+            </div>
+            <div style={{ margin: "10px" }}>
+              <StaticImage
+                src="../assets/prof_nu-nu.svg"
+                alt="nu-nu"
+              />
+            </div>
+            <div style={{ margin: "10px" }}>
+              <StaticImage
+                src="../assets/prof_ip.svg"
+                alt="ip"
+              />
+            </div>
+          </div>
+        </section>
       </div>
     )
   } else {

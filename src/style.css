@@ -391,6 +391,21 @@ a:focus {
   margin: 0;
 }
 
+.profile-area {
+  margin: 30px;
+}
+
+.profile-desc {
+  text-align: center;
+  font-weight: bold;
+}
+
+.profile-photos {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
 .post-list {
   margin-bottom: 0;
 }
@@ -520,7 +535,7 @@ a:focus {
 }
 
 .post-bg {
-  opacity: 0.7 !important;;
+  opacity: 0.7 !important;
 }
 
 .mask {
