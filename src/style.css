@@ -258,7 +258,9 @@ a:focus {
   margin: var(--spacing-0) auto;
   max-width: var(--maxWidth-wrapper);
   /* background-color: #f7e1d7; */
-  background-color: white;
+  /* background-color: white; */
+  background-image: url("/bg.png");
+  background-repeat: repeat;
 }
 
 .global-wrapper[data-is-root-path="true"] .bio {
@@ -396,6 +398,8 @@ a:focus {
 }
 
 .profile-desc {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
   text-align: center;
   font-weight: bold;
 }
