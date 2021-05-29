@@ -3,7 +3,7 @@ import Logo from "../assets/ojilogo.svg"
 import TopVideo from "../assets/topvideo.mp4"
 import { AiOutlineInstagram } from "react-icons/ai"
 import { FiTwitter } from "react-icons/fi"
-import { StaticImage, withArtDirection } from "gatsby-plugin-image"
+import { StaticImage } from "gatsby-plugin-image"
 // import { GrSpotify } from "react-icons/gr"
 
 const Layout = ({ location, children }) => {
@@ -37,24 +37,22 @@ const Layout = ({ location, children }) => {
             <br />
             不定期に更新していきます。
           </p>
+          <StaticImage
+            height={80}
+            layout="fixed"
+            style={{ margin: "0 auto" }}
+            src="../assets/oji-member.svg"
+            alt="member"
+          />
           <div className="profile-photos">
             <div style={{ margin: "10px" }}>
-              <StaticImage
-                src="../assets/prof_ibu.svg"
-                alt="ibu"
-              />
+              <StaticImage src="../assets/prof_ibu.svg" alt="ibu" />
             </div>
             <div style={{ margin: "10px" }}>
-              <StaticImage
-                src="../assets/prof_nu-nu.svg"
-                alt="nu-nu"
-              />
+              <StaticImage src="../assets/prof_nu-nu.svg" alt="nu-nu" />
             </div>
             <div style={{ margin: "10px" }}>
-              <StaticImage
-                src="../assets/prof_ip.svg"
-                alt="ip"
-              />
+              <StaticImage src="../assets/prof_ip.svg" alt="ip" />
             </div>
           </div>
         </section>
