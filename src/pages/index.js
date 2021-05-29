@@ -5,12 +5,12 @@ import Layout from "../components/layout"
 import PostCard from "../components/post-card"
 import SEO from "../components/seo"
 
+import { StaticImage } from "gatsby-plugin-image"
+
 const IndexPage = ({ location }) => {
   const data = useStaticQuery(graphql`
     query allContentfulAsset {
-      allContentfulBlogPost(
-        sort: { fields: createdAt, order: DESC}
-      ) {
+      allContentfulBlogPost(sort: { fields: createdAt, order: DESC }) {
         nodes {
           id
           heroImage {
@@ -32,6 +32,13 @@ const IndexPage = ({ location }) => {
   return (
     <Layout location={location}>
       <SEO title="東京オジサウナ" />
+      <StaticImage
+        height={80}
+        layout="fixed"
+        style={{ margin: "0 auto" }}
+        src="../assets/oji-log.svg"
+        alt="member"
+      />
       <ol className="post-list-wrapper" style={{ listStyle: `none` }}>
         {data.allContentfulBlogPost.nodes.map(post => {
           let lis = []
@@ -42,7 +49,7 @@ const IndexPage = ({ location }) => {
             lis.push(left + "%")
           }
           const shape = `${lis[0]} ${lis[1]} ${lis[2]} ${lis[3]} / ${lis[4]} ${lis[6]} ${lis[7]} ${lis[5]}`
-          return <PostCard key={post.id} post={post} shape={shape}/>
+          return <PostCard key={post.id} post={post} shape={shape} />
         })}
       </ol>
     </Layout>
