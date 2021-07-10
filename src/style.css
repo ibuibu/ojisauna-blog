@@ -577,3 +577,42 @@ a:focus {
     list-style-position: inside;
   }
 }
+
+/* Review */
+
+.review-area {
+  text-align: center;
+}
+
+.top-reviews {
+  display: flex;
+  justify-content: center;
+}
+
+.top-reviews li {
+  font-weight: bold;
+  list-style: none;
+  padding: 20px;
+  margin: 20px;
+  background-color: white;
+  border: solid;
+}
+
+.review-point {
+  max-width: 500px;
+  padding: 20px;
+  margin: 20px auto;
+  background-color: white;
+  border-radius: 30px;
+}
+.review-point-count {
+  font-weight: bold;
+  background-color: rgb(157, 157, 157);
+  padding: 0.5rem;
+  margin: 10px;
+}
+
+.review-body{
+  display: flex;
+  justify-content: center;
+}
