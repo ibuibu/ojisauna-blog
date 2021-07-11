@@ -580,6 +580,23 @@ a:focus {
 
 /* Review */
 
+.review-cards {
+  display: flex;
+  justify-content: center;
+}
+
+.review-card {
+  width: 200px;
+  text-align: center;
+}
+
+.review-card-title {
+  color: #1a202c;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-decoration: none;
+}
+
 .review-area {
   text-align: center;
   margin: 12px;
@@ -614,7 +631,7 @@ a:focus {
 .balloon {
   position: relative;
   display: inline-block;
-  margin: 4px;
+  margin: 2px;
   padding: 6px 6px;
   min-width: 120px;
   /* max-width: 100%; */
@@ -622,7 +639,7 @@ a:focus {
   color: black;
   font-size: 12px;
   background: #fff;
-  border: solid 3px black;
+  border: solid 2px black;
   box-sizing: border-box;
 }
 
@@ -669,6 +686,9 @@ a:focus {
 }
 
 .review-description {
+  padding: 1rem;
+  font-size: 12px;
+  line-height: 1.2rem;
   font-weight: bold;
 }
 
@@ -714,6 +734,6 @@ a:focus {
 .review-point-body {
   margin: 0;
   text-align: left;
-  height: 100px;
+  min-height: 130px;
   padding: 0.5rem;
 }
