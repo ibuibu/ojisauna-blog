@@ -17,6 +17,9 @@ import NuNuChest from "../assets/nu-nu_chest.svg"
 import Aroma from "../assets/review-icon/aroma.png"
 import Steam from "../assets/review-icon/steam.png"
 import Variation from "../assets/review-icon/variation.png"
+import Concentration from "../assets/review-icon/concentration.png"
+import HeatWave from "../assets/review-icon/heat-wave.png"
+import Entertainment from "../assets/review-icon/entertainment.png"
 
 export default function Review({ location, pageContext }) {
   const post = pageContext.post
@@ -50,20 +53,27 @@ export default function Review({ location, pageContext }) {
       </div>
       <section className="review-area">
         <h1> {post.facilityName}</h1>
-        <GatsbyImage
-          style={{ width: "300px", display: "block", background: "black" }}
-          image={image}
-          imgStyle={{ borderRadius: "200px" }}
-          alt={imageTitle}
-        />
-        <p> {post.description.description}</p>
+        <div className="review-summary">
+          <GatsbyImage
+            style={{
+              width: "300px",
+              maxWidth: "50%",
+              display: "block",
+              background: "black",
+            }}
+            image={image}
+            imgStyle={{ borderRadius: "200px" }}
+            alt={imageTitle}
+          />
+          <p className="review-description"> {post.description.description}</p>
+        </div>
         <div className="top-reviews">
-          <li> {saunaShortReview}</li>
-          <li> {waterShortReview}</li>
-          <li> {restSpaceShortReview}</li>
+          <li className="balloon"> {saunaShortReview}</li>
+          <li className="balloon"> {waterShortReview}</li>
+          <li className="balloon"> {restSpaceShortReview}</li>
         </div>
 
-        <div className="top-reviews">
+        <div className="top-chests">
           <img className="top-logo" src={IpChest} width="100px" />
           <img className="top-logo" src={IbuChest} width="100px" />
           <img className="top-logo" src={NuNuChest} width="100px" />
@@ -92,19 +102,28 @@ const Check = props => {
       case "variation":
         icon = Variation
         break
+      case "concentration":
+        icon = Concentration
+        break
+      case "heat-wave":
+        icon = HeatWave
+        break
+      case "entertainment":
+        icon = Entertainment
+        break
 
       default:
         break
     }
     return (
       <div className="review-point" key={idx}>
-        <p>
-          <span className="review-point-count">Point {idx + 1}</span>
-          <span className="review-point-count">{d.title}</span>
-        </p>
+        <img className="review-point-icon" src={icon} />
         <div className="review-body">
-          <img className="top-logo" src={icon} width="100px" />
-          <p>{d.body}</p>
+          <div className="review-point-header">
+            <span className="review-point-header-count">Point {idx + 1}</span>
+            <span className="review-point-header-title">{d.title}</span>
+          </div>
+          <p className="review-point-body">{d.body}</p>
         </div>
       </div>
     )
