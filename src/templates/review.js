@@ -20,6 +20,22 @@ import Variation from "../assets/review-icon/variation.png"
 import Concentration from "../assets/review-icon/concentration.png"
 import HeatWave from "../assets/review-icon/heat-wave.png"
 import Entertainment from "../assets/review-icon/entertainment.png"
+import Temperature from "../assets/review-icon/temperature.png"
+import Meditation from "../assets/review-icon/meditation.png"
+import Position from "../assets/review-icon/position.png"
+import Bath from "../assets/review-icon/bath.png"
+import Outdoor from "../assets/review-icon/outdoor.png"
+import WaterQuality from "../assets/review-icon/water-quality.png"
+import Conductor from "../assets/review-icon/conductor.png"
+import DressingRoom from "../assets/review-icon/dressing-room.png"
+import Hydration from "../assets/review-icon/hydration.png"
+import Interior from "../assets/review-icon/interior.png"
+import Congestion from "../assets/review-icon/congestion.png"
+import Food from "../assets/review-icon/food.png"
+import Drink from "../assets/review-icon/drink.png"
+import Rest from "../assets/review-icon/rest.png"
+import Cleanliness from "../assets/review-icon/cleanliness.png"
+import Scenery from "../assets/review-icon/scenery.png"
 
 export default function Review({ location, pageContext }) {
   const post = pageContext.post
@@ -110,6 +126,54 @@ const Check = props => {
         break
       case "entertainment":
         icon = Entertainment
+        break
+      case "temperature":
+        icon = Temperature
+        break
+      case "meditation":
+        icon = Meditation
+        break
+      case "position":
+        icon = Position
+        break
+      case "bath":
+        icon = Bath
+        break
+      case "outdoor":
+        icon = Outdoor
+        break
+      case "water-quality":
+        icon = WaterQuality
+        break
+      case "conductor":
+        icon = Conductor
+        break
+      case "dressing-room":
+        icon = DressingRoom
+        break
+      case "hydration":
+        icon = Hydration
+        break
+      case "interior":
+        icon = Interior
+        break
+      case "congestion":
+        icon = Congestion
+        break
+      case "food":
+        icon = Food
+        break
+      case "drink":
+        icon = Drink
+        break
+      case "rest":
+        icon = Rest
+        break
+      case "cleanliness":
+        icon = Cleanliness
+        break
+      case "scenery":
+        icon = Scenery
         break
 
       default:
