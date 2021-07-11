@@ -43,6 +43,9 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
             description {
               description
             }
+            saunaSpec
+            waterSpec
+            restSpaceSpec
 						saunaShortReview
 						waterShortReview
 						restSpaceShortReview

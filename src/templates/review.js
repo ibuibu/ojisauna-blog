@@ -4,7 +4,6 @@ import SEO from "../components/seo"
 import { Link } from "gatsby"
 import Logo from "../assets/ojilogo.svg"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
-// import { StaticImage } from "gatsby-plugin-image"
 
 import IpIllust from "../assets/prof_ip.svg"
 import IbuIllust from "../assets/prof_ibu.svg"
@@ -41,6 +40,9 @@ export default function Review({ location, pageContext }) {
   const post = pageContext.post
   const {
     facilityName,
+    saunaSpec,
+    waterSpec,
+    restSpaceSpec,
     saunaShortReview,
     waterShortReview,
     restSpaceShortReview,
@@ -72,8 +74,8 @@ export default function Review({ location, pageContext }) {
         <div className="review-summary">
           <GatsbyImage
             style={{
-              width: "300px",
-              maxWidth: "50%",
+              width: "200px",
+              maxWidth: "35%",
               display: "block",
               background: "black",
             }}
@@ -81,7 +83,12 @@ export default function Review({ location, pageContext }) {
             imgStyle={{ borderRadius: "200px" }}
             alt={imageTitle}
           />
-          <p className="review-description"> {post.description.description}</p>
+          <div>
+            <p className="review-description">{post.description.description}</p>
+            <p className="review-description">サウナ {post.saunaSpec}</p>
+            <p className="review-description">水風呂 {post.waterSpec}</p>
+            <p className="review-description">休憩スペース {post.restSpaceSpec}</p>
+          </div>
         </div>
         <div className="top-reviews">
           <li className="balloon"> {saunaShortReview}</li>

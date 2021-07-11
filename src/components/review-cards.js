@@ -10,7 +10,7 @@ const ReviewCard = props => {
       <div className="review-cards">
         {reviews.map((review, idx) => {
           const image = getImage(review.facilityImage)
-          const imageTitle = review.facilityImage.title
+          const imageTitle = review.slug
           return (
             <div className="review-card" key={idx}>
               <Link
