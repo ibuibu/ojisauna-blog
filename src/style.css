@@ -685,7 +685,7 @@ a:focus {
 .review-summary {
   text-align: left;
   max-width: 500px;
-  margin: 10px;
+  margin: 10px auto;
   padding: 20px;
   background-color: white;
   border-radius: 10px;
@@ -702,8 +702,8 @@ a:focus {
   text-align: center;
   width: 120px;
   padding: 0 1rem;
-  margin: 2px;
-  border-radius: 10px;
+  margin: 2px 10px 2px 0;
+  border-radius: 30px;
   background-color: black;
   color: white;
 }
