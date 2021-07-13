@@ -75,7 +75,7 @@ export default function Review({ location, pageContext }) {
         </Link>
       </div>
       <section className="review-area">
-        <h1> {post.facilityName}</h1>
+        <h1 className="review-facility-name"> {post.facilityName}</h1>
         <GatsbyImage
           style={{
             width: "100%",

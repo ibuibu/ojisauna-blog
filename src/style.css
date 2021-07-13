@@ -591,7 +591,13 @@ a:focus {
 }
 
 .review-card-title {
-  color: #1a202c;
+  display: inline-block;
+  color: black;
+  background-color: white;
+  border: solid;
+  border-width: 2px;
+  padding: 6px 12px;
+  margin-top: 4px;
   font-size: 1.2rem;
   font-weight: bold;
   text-decoration: none;
@@ -600,6 +606,11 @@ a:focus {
 .review-area {
   text-align: center;
   margin: 12px;
+}
+
+.review-facility-name {
+  font-size: 30px;
+  color: black;
 }
 
 .top-reviews {
@@ -618,21 +629,12 @@ a:focus {
   margin: 12px;
 }
 
-/* .top-reviews li {
-  font-weight: bold;
-  list-style: none;
-  padding: 20px;
-  margin: 20px;
-  background-color: white;
-  border: solid;
-  border-width: 3px 3px 6px 3px;
-} */
-
 .balloon {
   position: relative;
+  text-align: left;
   display: inline-block;
   margin: 2px;
-  padding: 6px 6px;
+  padding: 6px 8px;
   min-width: 120px;
   /* max-width: 100%; */
   width: 100px;
@@ -680,9 +682,10 @@ a:focus {
 .review-facility-image {
   width: 10px;
 }
-.review-summary{
+.review-summary {
   text-align: left;
-  margin: 20px;
+  max-width: 500px;
+  margin: 10px;
   padding: 20px;
   background-color: white;
   border-radius: 10px;
@@ -708,7 +711,7 @@ a:focus {
 .review-point {
   display: flex;
   max-width: 500px;
-  padding: 20px;
+  padding: 10px 20px 10px 10px;
   margin: 20px auto;
   border-radius: 10px;
 }
@@ -740,6 +743,7 @@ a:focus {
 
 .review-point-icon {
   width: 50px;
+  max-height:50px;
   object-fit: contain;
   margin: 0.5rem;
 }
@@ -747,6 +751,6 @@ a:focus {
 .review-point-body {
   margin: 0;
   text-align: left;
-  min-height: 130px;
-  padding: 0.5rem;
+  /* min-height: 130px; */
+  padding: 10px;
 }

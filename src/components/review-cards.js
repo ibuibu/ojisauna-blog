@@ -5,7 +5,7 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image"
 const ReviewCard = props => {
   const reviews = props.reviews.nodes
   return (
-    <section>
+    <section style={{ margin: "40px 0" }}>
       <h1 style={{ textAlign: "center" }}>オジレビュー</h1>
       <div className="review-cards">
         {reviews.map((review, idx) => {
@@ -24,11 +24,14 @@ const ReviewCard = props => {
                     display: "block",
                     background: "black",
                   }}
-                  imgStyle={{ borderRadius: "200px" }}
+                  placeHolder="none"
+                  imgStyle={{ borderRadius: "10px" }}
                   image={image}
                   alt={imageTitle}
                 />
-                <span className="review-card-title">No.{idx+1}{" "}{review.facilityName}</span>
+                <span className="review-card-title">
+                  No.{idx + 1} {review.facilityName}
+                </span>
               </Link>
             </div>
           )
