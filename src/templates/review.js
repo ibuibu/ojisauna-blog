@@ -4,10 +4,15 @@ import SEO from "../components/seo"
 import { Link } from "gatsby"
 import Logo from "../assets/ojilogo.svg"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
+import { StaticImage } from "gatsby-plugin-image"
 
-import IpIllust from "../assets/prof_ip.svg"
-import IbuIllust from "../assets/prof_ibu.svg"
-import NuNuIllust from "../assets/prof_nu-nu.svg"
+import IpWhite from "../assets/ip-white.svg"
+import IbuWhite from "../assets/ibu-white.svg"
+import NuNuWhite from "../assets/nu-nu-white.svg"
+
+import IpCheckTitle from "../assets/ip-check-title.svg"
+import IbuCheckTitle from "../assets/ibu-check-title.svg"
+import NuNuCheckTitle from "../assets/nu-nu-check-title.svg"
 
 import IpChest from "../assets/ip_chest.svg"
 import IbuChest from "../assets/ibu_chest.svg"
@@ -71,25 +76,38 @@ export default function Review({ location, pageContext }) {
       </div>
       <section className="review-area">
         <h1> {post.facilityName}</h1>
+        <GatsbyImage
+          style={{
+            width: "100%",
+            display: "block",
+            background: "black",
+          }}
+          image={image}
+          placeholder="none"
+          imgStyle={{ borderRadius: "10px" }}
+          alt={imageTitle}
+        />
         <div className="review-summary">
-          <GatsbyImage
-            style={{
-              width: "200px",
-              maxWidth: "35%",
-              display: "block",
-              background: "black",
-            }}
-            image={image}
-            imgStyle={{ borderRadius: "200px" }}
-            alt={imageTitle}
-          />
-          <div>
-            <p className="review-description">{post.description.description}</p>
-            <p className="review-description">サウナ {post.saunaSpec}</p>
-            <p className="review-description">水風呂 {post.waterSpec}</p>
-            <p className="review-description">休憩スペース {post.restSpaceSpec}</p>
-          </div>
+          <p className="review-description">{post.description.description}</p>
+          <p className="review-description">
+            <span className="review-description-title">サウナ</span> {saunaSpec}
+          </p>
+          <p className="review-description">
+            <span className="review-description-title">水風呂</span> {waterSpec}
+          </p>
+          <p className="review-description">
+            <span className="review-description-title">休憩スペース</span>{" "}
+            {restSpaceSpec}
+          </p>
         </div>
+        <StaticImage
+          width={200}
+          layout="fixed"
+          placeholder="none"
+          style={{ margin: "20px auto" }}
+          src="../assets/ojisauna-voice-title.svg"
+          alt="member"
+        />
         <div className="top-reviews">
           <li className="balloon"> {saunaShortReview}</li>
           <li className="balloon"> {waterShortReview}</li>
@@ -101,12 +119,30 @@ export default function Review({ location, pageContext }) {
           <img className="top-logo" src={IbuChest} width="100px" />
           <img className="top-logo" src={NuNuChest} width="100px" />
         </div>
-        <img className="top-logo" src={IpIllust} width="100px" />
-        <Check checkData={ipCheckData} />
-        <img className="top-logo" src={IbuIllust} width="100px" />
-        <Check checkData={ibuCheckData} />
-        <img className="top-logo" src={NuNuIllust} width="100px" />
-        <Check checkData={nuNuCheckData} />
+        <div
+          style={{ backgroundColor: "#5972A3" }}
+          className="review-check-title"
+        >
+          <img className="top-logo" src={IpWhite} width="100px" />
+          <img className="top-logo" src={IpCheckTitle} width="200px" />
+        </div>
+        <Check bgCol="rgba(89, 114, 163, 0.15)" checkData={ipCheckData} />
+        <div
+          style={{ backgroundColor: "#947C59" }}
+          className="review-check-title"
+        >
+          <img className="top-logo" src={IbuWhite} width="100px" />
+          <img className="top-logo" src={IbuCheckTitle} width="200px" />
+        </div>
+        <Check bgCol="rgba(148, 124, 89, 0.32)" checkData={ibuCheckData} />
+        <div
+          style={{ backgroundColor: "#758D71" }}
+          className="review-check-title"
+        >
+          <img className="top-logo" src={NuNuWhite} width="100px" />
+          <img className="top-logo" src={NuNuCheckTitle} width="200px" />
+        </div>
+        <Check bgCol="rgba(117, 141, 113, 0.38)" checkData={nuNuCheckData} />
       </section>
     </Layout>
   )
@@ -187,11 +223,14 @@ const Check = props => {
         break
     }
     return (
-      <div className="review-point" key={idx}>
+      <div
+        style={{ backgroundColor: props.bgCol }}
+        className="review-point"
+        key={idx}
+      >
         <img className="review-point-icon" src={icon} />
         <div className="review-body">
           <div className="review-point-header">
-            <span className="review-point-header-count">Point {idx + 1}</span>
             <span className="review-point-header-title">{d.title}</span>
           </div>
           <p className="review-point-body">{d.body}</p>

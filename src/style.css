@@ -638,8 +638,10 @@ a:focus {
   width: 100px;
   color: black;
   font-size: 12px;
+  font-weight: bold;
   background: #fff;
   border: solid 2px black;
+  border-radius: 10px;
   box-sizing: border-box;
 }
 
@@ -678,11 +680,12 @@ a:focus {
 .review-facility-image {
   width: 10px;
 }
-
-.review-summary {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 24px;
+.review-summary{
+  text-align: left;
+  margin: 20px;
+  padding: 20px;
+  background-color: white;
+  border-radius: 10px;
 }
 
 .review-description {
@@ -691,34 +694,45 @@ a:focus {
   margin: 0;
 }
 
+.review-description-title {
+  display: inline-block;
+  text-align: center;
+  width: 120px;
+  padding: 0 1rem;
+  margin: 2px;
+  border-radius: 10px;
+  background-color: black;
+  color: white;
+}
+
 .review-point {
   display: flex;
   max-width: 500px;
-  padding: 12px;
+  padding: 20px;
   margin: 20px auto;
-  background-color: white;
   border-radius: 10px;
+}
+
+.review-check-title {
+  display: flex;
+  justify-content: space-around;
+  border-radius: 10px;
+  max-width: 500px;
+  margin: auto;
 }
 
 .review-point-header {
   text-align: center;
 }
 
-.review-point-header-count {
-  display: inline-block;
-  font-weight: bold;
-  color: black;
-  font-size: 6px;
-}
-
 .review-point-header-title {
   display: inline-block;
-  width: 200px;
-  font-size: 12px;
+  width: 100%;
+  font-size: 16px;
   text-align: center;
   font-weight: bold;
   color: black;
-  background-color: rgb(196, 196, 196);
+  background-color: white;
   border-radius: 10px;
   padding: 0.5rem;
   margin: 6px;
