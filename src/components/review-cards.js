@@ -24,7 +24,7 @@ const ReviewCard = props => {
                     display: "block",
                     background: "black",
                   }}
-                  placeHolder="none"
+                  placeHolder="blurred"
                   imgStyle={{ borderRadius: "10px" }}
                   image={image}
                   alt={imageTitle}
