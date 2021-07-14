@@ -52,21 +52,18 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
 						ipCheck {
 							data {
 								tag,
-                title,
 								body
 							}
 						}
 						ibuCheck {
 							data {
 								tag,
-                title,
 								body
 							}
 						}
 						nuNuCheck {
 							data {
 								tag,
-                title,
 								body
 							}
 						}

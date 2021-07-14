@@ -151,72 +151,96 @@ export default function Review({ location, pageContext }) {
 const Check = props => {
   const el = props.checkData.map((d, idx) => {
     let icon
+    let title
+
     switch (d.tag) {
       case "aroma":
         icon = Aroma
+        title = "鼻腔をくすぐる香り"
         break
       case "steam":
         icon = Steam
+        title = "サウナ室内の蒸され具合"
         break
       case "variation":
         icon = Variation
+        title = "サウナのバリエーション"
         break
       case "concentration":
         icon = Concentration
+        title = "サウナ室内の集中環境"
         break
       case "heat-wave":
         icon = HeatWave
+        title = "施設独自の熱波形状"
         break
       case "entertainment":
         icon = Entertainment
+        title = "サ室エンターテイメント"
         break
       case "temperature":
         icon = Temperature
+        title = "あまみが浮き出る温度差"
         break
       case "meditation":
         icon = Meditation
+        title = "瞑想できるととのい空間"
         break
       case "position":
         icon = Position
+        title = "ととのいポジショニング"
         break
       case "bath":
         icon = Bath
+        title = "サウナ中に嗜むお湯"
         break
       case "outdoor":
         icon = Outdoor
+        title = "解放感あふれる露天"
         break
       case "water-quality":
         icon = WaterQuality
+        title = "オリジナルの水質"
         break
       case "conductor":
         icon = Conductor
+        title = "サウナー視点の動線設計"
         break
       case "dressing-room":
         icon = DressingRoom
+        title = "安心の脱衣所クオリティ"
         break
       case "hydration":
         icon = Hydration
+        title = "発汗に不安なしの水分補給"
         break
       case "interior":
         icon = Interior
+        title = "心躍る外観・インテリア"
         break
       case "congestion":
         icon = Congestion
+        title = "施設の来客状況"
         break
       case "food":
         icon = Food
+        title = "サウナ後に外せない「サ飯」"
         break
       case "drink":
         icon = Drink
+        title = "風呂上がりの一杯"
         break
       case "rest":
         icon = Rest
+        title = "アフターサウナのくつろぎ空間"
         break
       case "cleanliness":
         icon = Cleanliness
+        title = "すっきり・さっぱり清潔感"
         break
       case "scenery":
         icon = Scenery
+        title = "ここでしか見られない景色"
         break
 
       default:
@@ -231,7 +255,7 @@ const Check = props => {
         <img className="review-point-icon" src={icon} />
         <div className="review-body">
           <div className="review-point-header">
-            <span className="review-point-header-title">{d.title}</span>
+            <span className="review-point-header-title">{title}</span>
           </div>
           <p className="review-point-body">{d.body}</p>
         </div>

@@ -11,6 +11,16 @@ const ReviewCard = props => {
         {reviews.map((review, idx) => {
           const image = getImage(review.facilityImage)
           const imageTitle = review.slug
+
+          let lis = []
+          for (let i = 0; i < 4; i++) {
+            const num = Math.floor(10 + Math.random() * 81)
+            const left = 100 - num
+            lis.push(num + "%")
+            lis.push(left + "%")
+          }
+          const shape = `${lis[0]} ${lis[1]} ${lis[2]} ${lis[3]} / ${lis[4]} ${lis[6]} ${lis[7]} ${lis[5]}`
+
           return (
             <div className="review-card" key={idx}>
               <Link
@@ -19,13 +29,7 @@ const ReviewCard = props => {
                 style={{ textDecoration: "none" }}
               >
                 <GatsbyImage
-                  style={{
-                    width: "200px",
-                    display: "block",
-                    background: "black",
-                  }}
-                  placeHolder="blurred"
-                  imgStyle={{ borderRadius: "10px" }}
+                  imgStyle={{ borderRadius: shape }}
                   image={image}
                   alt={imageTitle}
                 />
