@@ -741,6 +741,11 @@ a:focus {
   margin: 6px;
 }
 
+.review-point-icon-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
 .review-point-icon {
   width: 50px;
   max-height:50px;

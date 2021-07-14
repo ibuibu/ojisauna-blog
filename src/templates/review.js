@@ -252,7 +252,9 @@ const Check = props => {
         className="review-point"
         key={idx}
       >
-        <img className="review-point-icon" src={icon} />
+        <div className='review-point-icon-wrapper'>
+          <img className="review-point-icon" src={icon} />
+        </div>
         <div className="review-body">
           <div className="review-point-header">
             <span className="review-point-header-title">{title}</span>
