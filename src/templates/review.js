@@ -68,7 +68,7 @@ export default function Review({ location, pageContext }) {
       >
         <Link to="/">
           <img
-            style={{ width: "300px", marginTop: "10px", margin: "auto" }}
+            style={{ width: "150px", marginTop: "10px", margin: "auto" }}
             className="top-logo"
             src={Logo}
           />
