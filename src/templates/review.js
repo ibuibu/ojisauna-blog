@@ -14,9 +14,9 @@ import IpCheckTitle from "../assets/ip-check-title.svg"
 import IbuCheckTitle from "../assets/ibu-check-title.svg"
 import NuNuCheckTitle from "../assets/nu-nu-check-title.svg"
 
-import IpChest from "../assets/ip_chest.svg"
-import IbuChest from "../assets/ibu_chest.svg"
-import NuNuChest from "../assets/nu-nu_chest.svg"
+import SaunaIcon from "../assets/sauna-icon.svg"
+import WaterIcon from "../assets/water-icon.svg"
+import RestSpaceIcon from "../assets/rest-space-icon.svg"
 
 import Aroma from "../assets/review-icon/aroma.png"
 import Steam from "../assets/review-icon/steam.png"
@@ -114,10 +114,10 @@ export default function Review({ location, pageContext }) {
           <li className="balloon"> {restSpaceShortReview}</li>
         </div>
 
-        <div className="top-chests">
-          <img className="top-logo" src={IpChest} width="100px" />
-          <img className="top-logo" src={IbuChest} width="100px" />
-          <img className="top-logo" src={NuNuChest} width="100px" />
+        <div className="voice-icons">
+          <img className="voice-icon" src={SaunaIcon} />
+          <img className="voice-icon" src={WaterIcon} />
+          <img className="voice-icon" src={RestSpaceIcon} />
         </div>
         <div
           style={{ backgroundColor: "#5972A3" }}

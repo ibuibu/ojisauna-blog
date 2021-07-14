@@ -618,16 +618,17 @@ a:focus {
   justify-content: center;
 }
 
-.top-chests {
+.voice-icons {
   display: flex;
   justify-content: center;
-  /* padding: 12px; */
   margin-bottom: 24px;
 }
 
-.top-chests img {
-  margin: 12px;
+.voice-icon {
+  width: 90px;
+  margin: 20px;
 }
+
 
 .balloon {
   position: relative;

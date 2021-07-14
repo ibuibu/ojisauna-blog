@@ -1,12 +1,18 @@
 import React from "react"
 import { Link } from "gatsby"
-import { GatsbyImage, getImage } from "gatsby-plugin-image"
+import { StaticImage, GatsbyImage, getImage } from "gatsby-plugin-image"
 
 const ReviewCard = props => {
   const reviews = props.reviews.nodes
   return (
-    <section style={{ margin: "40px 0" }}>
-      <h1 style={{ textAlign: "center" }}>オジレビュー</h1>
+    <section style={{ margin: "60px 0" }}>
+      <StaticImage
+        height={40}
+        layout="fixed"
+        style={{ margin: "30px auto" }}
+        src="../assets/oji-review.svg"
+        alt="member"
+      />
       <div className="review-cards">
         {reviews.map((review, idx) => {
           const image = getImage(review.facilityImage)
