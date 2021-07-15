@@ -31,6 +31,45 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
           }
         }
       }
+      allContentfulReview {
+        edges {
+          node {
+            facilityName
+            slug
+            facilityImage {
+              gatsbyImageData
+							title
+            }
+            description {
+              description
+            }
+            saunaSpec
+            waterSpec
+            restSpaceSpec
+						saunaShortReview
+						waterShortReview
+						restSpaceShortReview
+						ipCheck {
+							data {
+								tag,
+								body
+							}
+						}
+						ibuCheck {
+							data {
+								tag,
+								body
+							}
+						}
+						nuNuCheck {
+							data {
+								tag,
+								body
+							}
+						}
+          }
+        }
+      }
     }
     `
 )
@@ -49,6 +88,15 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     createPage({
         path: `/post/${edge.node.slug}/`,
         component: path.resolve("./src/templates/blog-post.js"),
+        context: { post: edge.node }
+    })
+  });
+
+  const reviewEdges = result.data.allContentfulReview.edges
+  reviewEdges.forEach(edge => {
+    createPage({
+        path: `/review/${edge.node.slug}/`,
+        component: path.resolve("./src/templates/review.js"),
         context: { post: edge.node }
     })
   });

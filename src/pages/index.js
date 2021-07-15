@@ -3,6 +3,7 @@ import { useStaticQuery, graphql } from "gatsby"
 
 import Layout from "../components/layout"
 import PostCard from "../components/post-card"
+import ReviewCards from "../components/review-cards"
 import SEO from "../components/seo"
 
 import { StaticImage } from "gatsby-plugin-image"
@@ -26,12 +27,23 @@ const IndexPage = ({ location }) => {
           }
         }
       }
+      allContentfulReview {
+        nodes {
+          id
+          facilityName
+          facilityImage {
+            gatsbyImageData(width: 320)
+          }
+          slug
+        }
+      }
     }
   `)
 
   return (
     <Layout location={location}>
       <SEO title="東京オジサウナ" />
+      <ReviewCards reviews={data.allContentfulReview} />
       <StaticImage
         height={80}
         layout="fixed"

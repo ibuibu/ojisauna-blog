@@ -7,7 +7,7 @@ module.exports = {
       name: `Hiroki Ibuka`,
       summary: `who lives and works in San Francisco building useful things.`,
     },
-    description: `東京オジサウナ`,
+    description: `サウナと散歩を愛するおじさん3人組。ささやかな日々の営みを、不定期に更新していきます。`,
     siteUrl: `https://ojisauna.com`,
     social: {
       twitter: `@ojisauna`,
