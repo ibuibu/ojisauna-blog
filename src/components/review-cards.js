@@ -1,8 +1,10 @@
 import React from "react"
 import { Link } from "gatsby"
 import { StaticImage, GatsbyImage, getImage } from "gatsby-plugin-image"
+import { Carousel } from "react-responsive-carousel"
+import styles from "react-responsive-carousel/lib/styles/carousel.min.css"
 
-const ReviewCard = props => {
+const ReviewCards = props => {
   const reviews = props.reviews.nodes
   return (
     <section style={{ margin: "60px 0" }}>
@@ -13,7 +15,17 @@ const ReviewCard = props => {
         src="../assets/oji-review.svg"
         alt="member"
       />
-      <div className="review-cards">
+      <Carousel
+        showArrows={true}
+        interval={2000}
+        autoPlay={true}
+        swipeable={true}
+        emulateTouch={true}
+        showStatus={false}
+        showThumbs={false}
+        infiniteLoop={true}
+      >
+      {/* <div className="review-cards"> */}
         {reviews.map((review, idx) => {
           const image = getImage(review.facilityImage)
           const imageTitle = review.slug
@@ -46,9 +58,10 @@ const ReviewCard = props => {
             </div>
           )
         })}
-      </div>
+      {/* </div> */}
+      </Carousel>
     </section>
   )
 }
 
-export default ReviewCard
+export default ReviewCards

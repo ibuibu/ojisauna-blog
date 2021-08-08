@@ -34,6 +34,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
       allContentfulReview {
         edges {
           node {
+            updatedAt(locale: "ja-JP", formatString: "YYYY.MM.DD")
             facilityName
             slug
             facilityImage {
