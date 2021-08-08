@@ -586,8 +586,10 @@ a:focus {
 }
 
 .review-card {
-  width: 200px;
+  width: 250px;
+  height: 270px;
   text-align: center;
+  margin: auto;
 }
 
 .review-card-title {
