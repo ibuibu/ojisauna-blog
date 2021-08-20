@@ -35,6 +35,7 @@ export default function Post({ location, pageContext }) {
             <img
               style={{ width: "300px", marginTop: "10px", margin: "auto" }}
               className="top-logo"
+              alt="main logo"
               src={Logo}
             />
           </Link>

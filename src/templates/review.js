@@ -70,6 +70,7 @@ export default function Review({ location, pageContext }) {
           <img
             style={{ width: "150px", marginTop: "10px", margin: "auto" }}
             className="top-logo"
+            alt="main logo"
             src={Logo}
           />
         </Link>
@@ -115,32 +116,32 @@ export default function Review({ location, pageContext }) {
         </div>
 
         <div className="voice-icons">
-          <img className="voice-icon" src={SaunaIcon} />
-          <img className="voice-icon" src={WaterIcon} />
-          <img className="voice-icon" src={RestSpaceIcon} />
+          <img className="voice-icon" alt="サウナアイコン" src={SaunaIcon} />
+          <img className="voice-icon" alt="水風呂アイコン" src={WaterIcon} />
+          <img className="voice-icon" alt="休憩所アイコン" src={RestSpaceIcon} />
         </div>
         <div
           style={{ backgroundColor: "#5972A3" }}
           className="review-check-title"
         >
-          <img className="top-logo" src={IpWhite} width="100px" />
-          <img className="top-logo" src={IpCheckTitle} width="200px" />
+          <img className="top-logo" alt="IPイラスト" src={IpWhite} width="100px" />
+          <img className="top-logo" alt="IPチェックタイトル" src={IpCheckTitle} width="200px" />
         </div>
         <Check bgCol="rgba(89, 114, 163, 0.15)" checkData={ipCheckData} />
         <div
           style={{ backgroundColor: "#947C59" }}
           className="review-check-title"
         >
-          <img className="top-logo" src={IbuWhite} width="100px" />
-          <img className="top-logo" src={IbuCheckTitle} width="200px" />
+          <img className="top-logo" alt="Ibuイラスト" src={IbuWhite} width="100px" />
+          <img className="top-logo" alt="Ibuチェックタイトル" src={IbuCheckTitle} width="200px" />
         </div>
         <Check bgCol="rgba(148, 124, 89, 0.32)" checkData={ibuCheckData} />
         <div
           style={{ backgroundColor: "#758D71" }}
           className="review-check-title"
         >
-          <img className="top-logo" src={NuNuWhite} width="100px" />
-          <img className="top-logo" src={NuNuCheckTitle} width="200px" />
+          <img className="top-logo" alt="nu-nuイラスト" src={NuNuWhite} width="100px" />
+          <img className="top-logo" alt="nu-nuチェックタイトル" src={NuNuCheckTitle} width="200px" />
         </div>
         <Check bgCol="rgba(117, 141, 113, 0.38)" checkData={nuNuCheckData} />
       </section>
@@ -253,7 +254,7 @@ const Check = props => {
         key={idx}
       >
         <div className='review-point-icon-wrapper'>
-          <img className="review-point-icon" src={icon} />
+          <img className="review-point-icon" alt="レビューポイントアイコン" src={icon} />
         </div>
         <div className="review-body">
           <div className="review-point-header">

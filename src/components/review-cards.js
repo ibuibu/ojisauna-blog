@@ -2,7 +2,7 @@ import React from "react"
 import { Link } from "gatsby"
 import { StaticImage, GatsbyImage, getImage } from "gatsby-plugin-image"
 import { Carousel } from "react-responsive-carousel"
-import styles from "react-responsive-carousel/lib/styles/carousel.min.css"
+import "react-responsive-carousel/lib/styles/carousel.min.css"
 
 const ReviewCards = props => {
   const reviews = props.reviews.nodes
@@ -25,7 +25,7 @@ const ReviewCards = props => {
         showThumbs={false}
         infiniteLoop={true}
       >
-      {/* <div className="review-cards"> */}
+        {/* <div className="review-cards"> */}
         {reviews.map((review, idx) => {
           const image = getImage(review.facilityImage)
           const imageTitle = review.slug
@@ -58,7 +58,7 @@ const ReviewCards = props => {
             </div>
           )
         })}
-      {/* </div> */}
+        {/* </div> */}
       </Carousel>
     </section>
   )
