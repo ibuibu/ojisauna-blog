@@ -55,6 +55,21 @@ const Layout = ({ location, children }) => {
               <StaticImage src="../assets/prof_ip.svg" alt="ip" />
             </div>
           </div>
+          <div style={{ textAlign: "center" }}>
+            <p style={{ marginBottom: 0 }}>First Single</p>
+            <h2 style={{ marginTop: 0 }}>Ojisauna_Time</h2>
+            <div className="iframe-wrapper">
+              <iframe
+                width="100%"
+                height="100%"
+                src="https://www.youtube.com/embed/drtjimAfiYw"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+              ></iframe>
+            </div>
+          </div>
         </section>
       </div>
     )

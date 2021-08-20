@@ -763,3 +763,20 @@ a:focus {
   /* min-height: 130px; */
   padding: 10px;
 }
+
+.iframe-wrapper {
+  position: relative;
+  width: 100%; /* ここは適時編集してください（px指定してmin-widthと組み合わせるなり） */
+}
+.iframe-wrapper::before {
+  content:'';
+  display: block;
+  padding-top: 56.25%; /* 高さ÷横幅×100 */
+}
+.iframe-wrapper iframe {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
