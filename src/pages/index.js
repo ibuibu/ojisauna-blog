@@ -27,7 +27,7 @@ const IndexPage = ({ location }) => {
           }
         }
       }
-      allContentfulReview(sort: { fields: createdAt, order: ASC }) {
+      allContentfulReview(sort: { fields: updatedAt, order: ASC }) {
         nodes {
           id
           facilityName
