@@ -56,6 +56,22 @@ const Layout = ({ location, children }) => {
             </div>
           </div>
           <div style={{ textAlign: "center" }}>
+            <p style={{ marginBottom: 0 }}>Second Single</p>
+            <h2 style={{ marginTop: 0 }}>TTNG</h2>
+            <div className="iframe-wrapper">
+              <iframe
+                width="560"
+                height="315"
+                src="https://www.youtube.com/embed/4w1cysrIytY"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+              ></iframe>
+            </div>
+          </div>
+          <br />
+          <div style={{ textAlign: "center" }}>
             <p style={{ marginBottom: 0 }}>First Single</p>
             <h2 style={{ marginTop: 0 }}>Ojisauna_Time</h2>
             <div className="iframe-wrapper">
