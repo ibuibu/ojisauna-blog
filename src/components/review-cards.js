@@ -25,7 +25,6 @@ const ReviewCards = props => {
         showThumbs={false}
         infiniteLoop={true}
       >
-        {/* <div className="review-cards"> */}
         {reviews.map((review, idx) => {
           const image = getImage(review.facilityImage)
           const imageTitle = review.slug
@@ -58,8 +57,12 @@ const ReviewCards = props => {
             </div>
           )
         })}
-        {/* </div> */}
       </Carousel>
+      <div className="button-wrapper">
+        <Link to="reviews" style={{ textDecoration: "none" }}>
+          <a className="button">もっとみる</a>
+        </Link>
+      </div>
     </section>
   )
 }

@@ -580,11 +580,6 @@ a:focus {
 
 /* Review */
 
-.review-cards {
-  display: flex;
-  justify-content: center;
-}
-
 .review-card {
   width: 250px;
   height: 270px;
@@ -764,19 +759,44 @@ a:focus {
   padding: 10px;
 }
 
+.reviews {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 800px;
+  margin: auto;
+  margin-top: 30px;
+}
+
 .iframe-wrapper {
   position: relative;
   width: 100%; /* ここは適時編集してください（px指定してmin-widthと組み合わせるなり） */
 }
+
 .iframe-wrapper::before {
   content:'';
   display: block;
   padding-top: 56.25%; /* 高さ÷横幅×100 */
 }
+
 .iframe-wrapper iframe {
   position: absolute;
   width: 100%;
   height: 100%;
   top: 0;
   left: 0;
+}
+
+.button-wrapper {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.button {
+  background-color: white;
+  color: black;
+  text-decoration: none;
+  border: solid 1px black;
+  margin: 10px;
+  padding: 10px;
 }
