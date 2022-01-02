@@ -796,7 +796,8 @@ a:focus {
   background-color: white;
   color: black;
   text-decoration: none;
-  border: solid 1px black;
-  margin: 10px;
-  padding: 10px;
+  border: solid 2px black;
+  font-size: var(--fontSize-0);
+  margin: 1rem;
+  padding: 0.8rem 1rem;
 }

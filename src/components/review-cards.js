@@ -51,7 +51,7 @@ const ReviewCards = props => {
                   alt={imageTitle}
                 />
                 <span className="review-card-title">
-                  No.{idx + 1} {review.facilityName}
+                  {review.facilityName}
                 </span>
               </Link>
             </div>
@@ -60,7 +60,7 @@ const ReviewCards = props => {
       </Carousel>
       <div className="button-wrapper">
         <Link to="reviews" style={{ textDecoration: "none" }}>
-          <a className="button">もっとみる</a>
+          <a className="button">もっと見る &nbsp; ></a>
         </Link>
       </div>
     </section>
