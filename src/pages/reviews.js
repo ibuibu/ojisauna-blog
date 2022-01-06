@@ -1,6 +1,6 @@
 import React from "react"
 import { useStaticQuery, graphql, Link } from "gatsby"
-import { GatsbyImage, getImage } from "gatsby-plugin-image"
+import { StaticImage, GatsbyImage, getImage } from "gatsby-plugin-image"
 
 import Logo from "../assets/ojilogo.svg"
 import Layout from "../components/layout"
@@ -44,6 +44,13 @@ const IndexPageReview = ({ location }) => {
           />
         </Link>
       </div>
+      <StaticImage
+        height={40}
+        layout="fixed"
+        style={{ margin: "30px auto" }}
+        src="../assets/oji-review.svg"
+        alt="member"
+      />
       <div className="reviews">
         {reviews.map((review, idx) => {
           const image = getImage(review.facilityImage)
@@ -70,9 +77,7 @@ const IndexPageReview = ({ location }) => {
                   image={image}
                   alt={imageTitle}
                 />
-                <span className="review-card-title">
-                  {review.facilityName}
-                </span>
+                <span className="review-card-title">{review.facilityName}</span>
               </Link>
             </div>
           )
