@@ -5,6 +5,7 @@ import Layout from "../components/layout"
 import PostCard from "../components/post-card"
 import ReviewCards from "../components/review-cards"
 import SEO from "../components/seo"
+import { FiTwitter } from "react-icons/fi"
 
 import { StaticImage } from "gatsby-plugin-image"
 
@@ -44,6 +45,7 @@ const IndexPage = ({ location }) => {
     <Layout location={location}>
       <SEO title="東京オジサウナ" />
       <ReviewCards reviews={data.allContentfulReview} />
+      <Twitter />
       <StaticImage
         height={80}
         layout="fixed"
@@ -65,6 +67,38 @@ const IndexPage = ({ location }) => {
         })}
       </ol>
     </Layout>
+  )
+}
+
+const Twitter = () => {
+  React.useEffect(() => {
+    const s = document.createElement("script")
+    s.setAttribute("src", "https://platform.twitter.com/widgets.js")
+    document.body.appendChild(s)
+  }, [])
+  return (
+    <div style={{ textAlign: "center" }}>
+      <div>
+        <a
+          href="https://twitter.com/tokyoojisauna/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <FiTwitter size={30} color={"#00acee"} />
+          <FiTwitter size={30} color={"#00acee"} />
+          <FiTwitter size={30} color={"#00acee"} />
+        </a>
+      </div>
+      <a
+        class="twitter-timeline"
+        href="https://twitter.com/tokyoojisauna?ref_src=twsrc%5Etfw"
+        data-width="300"
+        data-height="300"
+        data-chrome="noheadernofooternoborders"
+      >
+        Tweets by tokyoojisauna
+      </a>
+    </div>
   )
 }
 
