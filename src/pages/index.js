@@ -6,6 +6,7 @@ import PostCard from "../components/post-card"
 import ReviewCards from "../components/review-cards"
 import SEO from "../components/seo"
 import { FiTwitter } from "react-icons/fi"
+import { RiSpotifyLine } from "react-icons/ri"
 
 import { StaticImage } from "gatsby-plugin-image"
 
@@ -66,6 +67,27 @@ const IndexPage = ({ location }) => {
           return <PostCard key={post.id} post={post} shape={shape} />
         })}
       </ol>
+      <div style={{ textAlign: "center" }}>
+        <div>
+          <a
+            href="https://open.spotify.com/playlist/0D8tXpGdhbtZzSndxyrK2a"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <RiSpotifyLine size={30} color={"#81b71a"} />
+            <RiSpotifyLine size={30} color={"#81b71a"} />
+            <RiSpotifyLine size={30} color={"#81b71a"} />
+          </a>
+        </div>
+        <iframe
+          src="https://open.spotify.com/embed?uri=spotify%3Aplaylist%3A0D8tXpGdhbtZzSndxyrK2a"
+          width="300"
+          height="380"
+          frameborder="0"
+          allowtransparency="true"
+          allow="encrypted-media"
+        ></iframe>
+      </div>
     </Layout>
   )
 }
