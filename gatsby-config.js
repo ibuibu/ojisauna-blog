@@ -12,7 +12,7 @@ module.exports = {
     social: {
       twitter: `@ojisauna`,
     },
-    ogpImage: `/ogp.png`
+    ogpImage: `/ogp.png`,
   },
   plugins: [
     {
@@ -71,6 +71,11 @@ module.exports = {
         accessToken: process.env.GATSBY_CONTENTFUL_ACCESS_TOKEN,
       },
     },
-
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [`gatsby-remark-responsive-iframe`],
+      },
+    },
   ],
 }
