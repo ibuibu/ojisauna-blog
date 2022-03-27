@@ -56,6 +56,16 @@ const Layout = ({ location, children }) => {
             </div>
           </div>
           <div style={{ textAlign: "center" }}>
+            <h2 style={{ marginTop: 0 }}>アプリ</h2>
+            <a
+              rel="noopener noreferrer"
+              target="_blank"
+              href="https://salog.ojisauna.com"
+            >
+              <StaticImage src="../assets/salog.png" alt="ip" />
+            </a>
+          </div>
+          <div style={{ textAlign: "center" }}>
             <p style={{ marginBottom: 0 }}>Third Single</p>
             <h2 style={{ marginTop: 0 }}>気泡は希望</h2>
             <div className="iframe-wrapper">
