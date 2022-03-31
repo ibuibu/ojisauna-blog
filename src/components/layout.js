@@ -56,13 +56,13 @@ const Layout = ({ location, children }) => {
             </div>
           </div>
           <div style={{ textAlign: "center" }}>
-            <h2 style={{ marginTop: 0 }}>アプリ</h2>
+            <h2 style={{ marginTop: "4rem" }}>アプリ</h2>
             <a
               rel="noopener noreferrer"
               target="_blank"
               href="https://salog.ojisauna.com"
             >
-              <StaticImage src="../assets/salog.png" alt="ip" />
+              <StaticImage src="../assets/salog.png" alt="ip" width="500" />
             </a>
           </div>
           <div style={{ textAlign: "center" }}>

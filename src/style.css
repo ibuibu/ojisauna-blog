@@ -407,6 +407,8 @@ a:focus {
 .profile-photos {
   display: flex;
   justify-content: space-around;
+  max-width: 500px;
+  margin: 0 auto;
 }
 
 .post-list {
@@ -770,7 +772,9 @@ a:focus {
 
 .iframe-wrapper {
   position: relative;
-  width: 100%; /* ここは適時編集してください（px指定してmin-widthと組み合わせるなり） */
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
 }
 
 .iframe-wrapper::before {
