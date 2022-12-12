@@ -73,6 +73,14 @@ const Layout = ({ location, children }) => {
               allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
               loading="lazy"
             />
+            <a href="https://podcasts.google.com/feed/aHR0cHM6Ly9hbmNob3IuZm0vcy9kMmU0NDkyYy9wb2RjYXN0L3Jzcw">
+              <img
+                src="https://www.gstatic.com/podcasts_console/promote/Japanese_JA/JA_Google_Podcasts_Badge.svg"
+                width="150"
+                height="38"
+                alt="Google Podcasts で聴く"
+              />
+            </a>
           </div>
           <div style={{ textAlign: "center" }}>
             <h2 style={{ marginTop: "4rem" }}>サウナハット</h2>
