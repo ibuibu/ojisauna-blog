@@ -805,3 +805,7 @@ a:focus {
   margin: 1rem;
   padding: 0.8rem 1rem;
 }
+
+.twitter-timeline {
+  margin:auto;
+}

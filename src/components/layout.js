@@ -55,6 +55,25 @@ const Layout = ({ location, children }) => {
               <StaticImage src="../assets/prof_ip.svg" alt="ip" />
             </div>
           </div>
+          <div
+            style={{
+              textAlign: "center",
+              maxWidth: 500,
+              margin: "auto",
+            }}
+          >
+            <h2 style={{ marginTop: "4rem" }}>ポッドキャスト</h2>
+            <iframe
+              style={{ borderRadius: 12 }}
+              src="https://open.spotify.com/embed/show/4ZfFJChKH6E85ntSi7D2cX?utm_source=generator&theme=0"
+              width="100%"
+              height="300"
+              frameBorder="0"
+              allowfullscreen=""
+              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+              loading="lazy"
+            />
+          </div>
           <div style={{ textAlign: "center" }}>
             <h2 style={{ marginTop: "4rem" }}>サウナハット</h2>
             <a
