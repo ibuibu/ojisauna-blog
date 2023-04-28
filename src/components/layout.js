@@ -83,6 +83,16 @@ const Layout = ({ location, children }) => {
             </a>
           </div>
           <div style={{ textAlign: "center" }}>
+            <h2 style={{ marginTop: "4rem" }}>マルシェバッグ</h2>
+            <a
+              rel="noopener noreferrer"
+              target="_blank"
+              href="https://bag.ojisauna.com/"
+            >
+              <StaticImage src="../assets/bag-bannar.png" alt="ip" width="500" />
+            </a>
+          </div>
+          <div style={{ textAlign: "center" }}>
             <h2 style={{ marginTop: "4rem" }}>サウナハット</h2>
             <a
               rel="noopener noreferrer"
