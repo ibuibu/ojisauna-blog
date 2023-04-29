@@ -84,7 +84,6 @@ export default function Review({ location, pageContext }) {
             background: "black",
           }}
           image={image}
-          placeholder="none"
           imgStyle={{ borderRadius: "10px" }}
           alt={imageTitle}
         />
@@ -104,7 +103,6 @@ export default function Review({ location, pageContext }) {
         <StaticImage
           width={200}
           layout="fixed"
-          placeholder="none"
           style={{ margin: "20px auto" }}
           src="../assets/ojisauna-voice-title.svg"
           alt="member"
